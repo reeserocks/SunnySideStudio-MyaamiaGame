@@ -1,11 +1,11 @@
-//PLAYER.CS
+//PLAYERMOVEMENT.CS
 
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
 
@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
     private bool isJumping;
+    private float jumpTimeCounter;
+    private float jumpTime = 0.35f;
 
     void Update()
     {
@@ -32,7 +34,24 @@ public class Player : MonoBehaviour
         //jump
         if(!isJumping && moveVertical > 0)
         {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
+        //keep jumping 
+        if (Input.GetKey(KeyCode.UpArrow) && isJumping)
+        {
+            if (jumpTimeCounter > 0) {
+                rb.AddForce(new Vector2(0, 0.01f), ForceMode2D.Impulse);
+                jumpTimeCounter -= Time.deltaTime;
+            } else
+            {
+                isJumping = false;
+            }
+        }
+        if(Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            isJumping = false;
         }
     }
 
