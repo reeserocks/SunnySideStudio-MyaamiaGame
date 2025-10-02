@@ -10,9 +10,11 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/[Aa]rtifactDB/
 *.log
 *.dll
 *.obj
+
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
 *.blend1
@@ -80,6 +82,8 @@ crashlytics-build.properties
 
 # TestRunner generated files
 InitTestScene*.unity*
+
+/
 
 # Addressables default ignores, before user customizations
 /ServerData
