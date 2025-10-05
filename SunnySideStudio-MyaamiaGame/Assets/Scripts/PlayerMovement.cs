@@ -11,17 +11,36 @@ public class PlayerMovement : MonoBehaviour
 
     private float speed = 3f;
     private float jumpForce = 20f;
+    private float holdForce = 0.8f;
+    private float maxHoldTime = 0.35f;
+
     private float moveHorizontal;
     private float moveVertical;
+    private float holdTimeCounter;
+
+    private bool isGrounded;
     private bool isJumping;
-    private float jumpTimeCounter;
-    private float jumpTime = 0.35f;
+    private bool jumpHeld;
 
     void Update()
     {
         //get move input
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+        //jump
+        if (moveVertical > 0 && isGrounded)
+        {
+            isJumping = true;
+            jumpHeld = true;
+            holdTimeCounter = maxHoldTime;
+            Debug.Log("Jump");
+        }
+        //keep jumping
+        if (moveVertical <=0)
+        {
+            jumpHeld = false;
+        }
     }
 
     void FixedUpdate()
@@ -31,43 +50,36 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(new Vector2(moveHorizontal * speed, 0), ForceMode2D.Impulse);
         }
+
         //jump
-        if(!isJumping && moveVertical > 0)
+        if(isJumping)
         {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            isGrounded = false;
+            isJumping = false;
         }
         //keep jumping 
-        if (Input.GetKey(KeyCode.UpArrow) && isJumping)
+        if (jumpHeld && holdTimeCounter > 0)
         {
-            if (jumpTimeCounter > 0) {
-                rb.AddForce(new Vector2(0, 0.01f), ForceMode2D.Impulse);
-                jumpTimeCounter -= Time.deltaTime;
-            } else
-            {
-                isJumping = false;
-            }
-        }
-        if(Input.GetKeyUp(KeyCode.UpArrow))
-        {
-            isJumping = false;
+            rb.AddForce(Vector2.up * holdForce, ForceMode2D.Impulse);
+            holdTimeCounter -= Time.fixedDeltaTime;
         }
     }
 
-    //check if can jump
+    //check if is grounded
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.CompareTag("Ground"))
         {
-            isJumping = false;
+            isGrounded = true;
+            jumpHeld = false;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.CompareTag("Ground"))
         {
-            isJumping = true;
+            isGrounded = false;
         }
     }
 }

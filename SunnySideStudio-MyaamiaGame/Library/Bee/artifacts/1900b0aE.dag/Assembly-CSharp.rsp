@@ -457,6 +457,7 @@
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/ControlSwitcher.cs"
 "Assets/Scripts/ItemSpawner.cs"
+"Assets/Scripts/ObjectParent.cs"
 "Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0
 /deterministic
