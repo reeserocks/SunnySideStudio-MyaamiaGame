@@ -11,7 +11,6 @@ public class ObjectParent : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        Debug.Log("Starting loop");
     }
 
     // Update is called once per frame
@@ -25,7 +24,6 @@ public class ObjectParent : MonoBehaviour
             rb.AddForce(new Vector2(0, moveVertical * speed), ForceMode2D.Impulse);
         }
         else {
-            Debug.Log("Ending loop");
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             rb.gravityScale = 1;
             this.enabled = false;

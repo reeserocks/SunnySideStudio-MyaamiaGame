@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ControlSwitcher.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\WordBankManager.cs" />
     <Compile Include="Assets\Scripts\ObjectParent.cs" />
     <Compile Include="Assets\Scripts\ItemSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
