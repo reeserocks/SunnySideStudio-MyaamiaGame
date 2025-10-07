@@ -34,7 +34,6 @@ public class ItemSpawner : MonoBehaviour
             }
             currentText = string.Empty;
             textBar.text = string.Empty;
-            new WaitForSeconds(.2f);
         }
         else if (Input.inputString != "") {
             currentText += Input.inputString;
