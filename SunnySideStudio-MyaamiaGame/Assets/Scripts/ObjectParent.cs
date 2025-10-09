@@ -4,6 +4,7 @@ using UnityEngine;
 public class ObjectParent : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private BoxCollider2D collision;
     private float speed = .1f;
     private float moveHorizontal;
     private float moveVertical;
@@ -11,6 +12,8 @@ public class ObjectParent : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        collision = GetComponent<BoxCollider2D>();
+        collision.isTrigger = true;
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class ObjectParent : MonoBehaviour
         else {
             rb.constraints = RigidbodyConstraints2D.FreezePositionX;
             rb.gravityScale = 1;
+            collision.isTrigger = false;
             this.enabled = false;
         }
     }

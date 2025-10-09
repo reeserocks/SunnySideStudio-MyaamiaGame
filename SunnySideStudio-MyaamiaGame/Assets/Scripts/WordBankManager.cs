@@ -7,27 +7,31 @@ using UnityEngine;
 public class WordBankManager : MonoBehaviour
 {
     public GameObject wordBank;
+    public int positionChange;
     private static List<bool> discoveredWords = Enumerable.Repeat<bool>(false, 15).ToList();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         wordBank.SetActive(false);
+        updateDiscoveredWords();
         List<GameObject> childButtons = new List<GameObject>();
         foreach (Transform button in transform)
         {
             childButtons.Add(button.gameObject);
         }
 
-        for (int i = 0; i < discoveredWords.Count; i++)
+        for (int i = 0; i < childButtons.Count; i++)
         {
             childButtons[i].SetActive(discoveredWords[i]);
         }
     }
 
-    void updateDiscoveredWords(int pos)
+    void updateDiscoveredWords()
     {
-        discoveredWords[pos] = true;
-        Start();
+        if (positionChange != -1)
+        {
+            discoveredWords[positionChange] = true;
+        }
     }
 }
