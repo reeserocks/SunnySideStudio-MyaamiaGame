@@ -49,5 +49,7 @@ MonoBehaviour:
   player: {fileID: 576119759173723452, guid: 27699d41e19bb3141980627698c81f66, type: 3}
   englishValidObjects:
   - {fileID: 1582130717941218663, guid: a9744c7f892653d4f908d58178d1f12d, type: 3}
+  - {fileID: 4304272080189626353, guid: 55bc3edacea752047bb0b65585e8e455, type: 3}
   myaamiaValidObjects:
   - awikaakani
+  - mihkintaakan
