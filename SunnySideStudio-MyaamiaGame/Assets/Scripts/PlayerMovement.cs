@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
             jumpHeld = true;
             holdTimeCounter = maxHoldTime;
-            Debug.Log("Jump");
         }
         //keep jumping
         if (moveVertical <=0)

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObjectParent : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private BoxCollider2D collision;
+    public Rigidbody2D rb;
+    public BoxCollider2D collision;
     private float maxVelocity = 5.0f;
     private float speed = .1f;
     private float moveHorizontal;
