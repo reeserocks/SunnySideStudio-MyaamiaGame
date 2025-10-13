@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1560728292460839411}
   - component: {fileID: 3345694023612683946}
+  - component: {fileID: 8194861556517584158}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,6 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9bbb73411392e458992d0b24a284f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlSwitcher
-  player: {fileID: 576119759173723452, guid: 27699d41e19bb3141980627698c81f66, type: 3}
-  itemSpawner: {fileID: 3083587854558865573, guid: 883f5767a7a6abf428cb9e4da95eb6a8, type: 3}
-  gameCanvas: {fileID: 4468545424477553578, guid: 0bb01e4d07850024f92d8a2de99f4291, type: 3}
+  player: {fileID: 0}
+  itemSpawner: {fileID: 0}
+  gameCanvas: {fileID: 0}
+--- !u!114 &8194861556517584158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4476287590447833386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 513f4935665383043ac076e6490c7b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager

@@ -68,4 +68,14 @@ public class ItemSpawner : MonoBehaviour
         }
         return -1;
     }
+
+    // SAVE DATA
+    public static List<GameObject> spawnedObjects = new List<GameObject>();
+
+    void SpawnObject(int index)
+    {
+        Vector3 offset = new Vector3(3.5f, 3f, 0);
+        GameObject obj = Instantiate(englishValidObjects[index], player.transform.position + offset, Quaternion.identity);
+        spawnedObjects.Add(obj);
+    }
 }

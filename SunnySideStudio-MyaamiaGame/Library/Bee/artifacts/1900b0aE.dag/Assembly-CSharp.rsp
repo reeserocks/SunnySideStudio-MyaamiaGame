@@ -456,16 +456,18 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/ControlSwitcher.cs"
-"Assets/Scripts/Hanger.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/ItemSpawner.cs"
+"Assets/Scripts/Level 1 Items/Hanger.cs"
+"Assets/Scripts/Level 1 Items/Pillow.cs"
 "Assets/Scripts/LevelFlag.cs"
-"Assets/Scripts/LevelSelect.cs"
 "Assets/Scripts/ObjectParent.cs"
-"Assets/Scripts/Pillow.cs"
-"Assets/Scripts/PlayerMovement.cs"
+"Assets/Scripts/Player.cs"
+"Assets/Scripts/SaveSystem.cs"
+"Assets/Scripts/Scene Handling/LevelSelect.cs"
+"Assets/Scripts/Scene Handling/WorldSelect.cs"
 "Assets/Scripts/Spikes.cs"
 "Assets/Scripts/WordBankManager.cs"
-"Assets/Scripts/WorldSelect.cs"
 -langversion:9.0
 /deterministic
 /optimize+

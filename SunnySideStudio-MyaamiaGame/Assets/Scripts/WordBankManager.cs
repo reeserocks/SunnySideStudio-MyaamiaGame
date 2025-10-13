@@ -34,4 +34,20 @@ public class WordBankManager : MonoBehaviour
             discoveredWords[positionChange] = true;
         }
     }
+
+    // SAVE DATA 
+    public static List<bool> GetDiscoveredWords()
+    {
+        return new List<bool>(discoveredWords);
+    }
+
+    public static void LoadDiscoveredWords(List<bool> loadedList)
+    {
+        if (loadedList != null || loadedList.Count == 0)
+        {
+            return;
+        }
+
+        discoveredWords = loadedList;
+    }
 }
