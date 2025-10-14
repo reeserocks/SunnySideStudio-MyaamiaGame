@@ -8,8 +8,10 @@ using UnityEngine.Rendering;
 public class Player : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRenderer spriteRenderer;
 
-    private float speed = 3f;
+    private float speed = 2f;
     private float jumpForce = 20f;
     private float holdForce = 0.8f;
     private float maxHoldTime = 0.35f;
@@ -53,6 +55,21 @@ public class Player : MonoBehaviour
         if (moveHorizontal != 0)
         {
             rb.AddForce(new Vector2(moveHorizontal * speed, 0), ForceMode2D.Impulse);
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
+
+        // movement animations
+        if (moveHorizontal < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (moveHorizontal > 0)
+        {
+            spriteRenderer.flipX = false;
         }
 
         // jump
@@ -67,6 +84,22 @@ public class Player : MonoBehaviour
         {
             rb.AddForce(Vector2.up * holdForce, ForceMode2D.Impulse);
             holdTimeCounter -= Time.fixedDeltaTime;
+        }
+
+        // jump animations
+        if (rb.linearVelocity.y == 0)
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+        }
+        if (rb.linearVelocity.y > 0)
+        {
+            animator.SetBool("isJumping", true);
+        }
+        if (rb.linearVelocity.y < 0)
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", true);
         }
     }
 
