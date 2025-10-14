@@ -10,12 +10,23 @@ public class ObjectParent : MonoBehaviour
     private float speed = .1f;
     private float moveHorizontal;
     private float moveVertical;
+    private bool isColliding = false;
 
     protected void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         collision = GetComponent<BoxCollider2D>();
         collision.isTrigger = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        isColliding = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isColliding = false;
     }
 
     // Update is called once per frame
@@ -30,10 +41,17 @@ public class ObjectParent : MonoBehaviour
             capVelocity();
         }
         else {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionX;
-            rb.gravityScale = 1;
-            collision.isTrigger = false;
-            this.enabled = false;
+            if (!isColliding)
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+                rb.gravityScale = 1;
+                collision.isTrigger = false;
+                this.enabled = false;
+            }
+            else
+            {
+                //play sound to indicate failure to spawn
+            }
         }
     }
 

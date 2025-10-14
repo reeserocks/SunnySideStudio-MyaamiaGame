@@ -620,7 +620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200111929660954914, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.07
+      value: -5.08
       objectReference: {fileID: 0}
     - target: {fileID: 2200111929660954914, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -853,6 +853,14 @@ PrefabInstance:
       propertyPath: wordBank
       value: 
       objectReference: {fileID: 97122000}
+    - target: {fileID: 5872463644335231384, guid: 883f5767a7a6abf428cb9e4da95eb6a8, type: 3}
+      propertyPath: textCanvas
+      value: 
+      objectReference: {fileID: 4587176440382851879, guid: 0bb01e4d07850024f92d8a2de99f4291, type: 3}
+    - target: {fileID: 5872463644335231384, guid: 883f5767a7a6abf428cb9e4da95eb6a8, type: 3}
+      propertyPath: controlManager
+      value: 
+      objectReference: {fileID: 4476287590447833386, guid: 4475f18071e94ba42b284200bf930365, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
