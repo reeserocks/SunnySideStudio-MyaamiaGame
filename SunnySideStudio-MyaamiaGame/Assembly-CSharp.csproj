@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Scene Handling\WorldSelect.cs" />
     <Compile Include="Assets\Scripts\ControlSwitcher.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
+    <Compile Include="Assets\Scripts\Scene Handling\ClickSound.cs" />
     <Compile Include="Assets\Scripts\World 1 Items\Pillow.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

@@ -462,6 +462,7 @@
 "Assets/Scripts/ObjectParent.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/SaveSystem.cs"
+"Assets/Scripts/Scene Handling/ClickSound.cs"
 "Assets/Scripts/Scene Handling/LevelSelect.cs"
 "Assets/Scripts/Scene Handling/WorldSelect.cs"
 "Assets/Scripts/Spikes.cs"
