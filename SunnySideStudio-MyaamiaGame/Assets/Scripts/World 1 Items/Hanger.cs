@@ -17,6 +17,8 @@ public class Hanger : ObjectParent
     void Start()
     {
         collision.isTrigger = true;
+
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
     }
 
     new void Update()
@@ -68,6 +70,13 @@ public class Hanger : ObjectParent
         joint.autoConfigureConnectedAnchor = false;
         joint.connectedAnchor = Vector2.zero;
 
+        // set anim
+        Player player = playerRb.GetComponent<Player>();
+        if (player)
+        {
+            player.SetHanging(true);
+        }
+
         isPlayerAttached = true;
     }
 
@@ -97,6 +106,13 @@ public class Hanger : ObjectParent
 
         // apply jump
         playerRb.AddForce(tangentDir * boostedJump, ForceMode2D.Impulse);
+
+        // set anim
+        Player player = playerRb.GetComponent<Player>();
+        if (player)
+        {
+            player.SetHanging(false);
+        }
 
         // reset state
         isPlayerAttached = false;

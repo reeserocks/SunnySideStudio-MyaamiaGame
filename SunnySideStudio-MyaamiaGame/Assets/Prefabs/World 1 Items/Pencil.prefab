@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03eb94f8b08d6fb458576de6944ee1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectParent
+  rb: {fileID: 0}
+  collision: {fileID: 0}
 --- !u!50 &3845733176094498761
 Rigidbody2D:
   serializedVersion: 5
@@ -131,7 +133,7 @@ GameObject:
   - component: {fileID: 3351815291506622280}
   - component: {fileID: 6616087521154814293}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,9 +148,9 @@ Transform:
   m_GameObject: {fileID: 4775048890698018341}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4436, y: 0.7146, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -4.96, y: 4.78, z: 0}
+  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5473733045790388081}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -199,7 +201,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -6418337541015408120, guid: 80bcd62a23ca6594a84fa4ec2cdd9436, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

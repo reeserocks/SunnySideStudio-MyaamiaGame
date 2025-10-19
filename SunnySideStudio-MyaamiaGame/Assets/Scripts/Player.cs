@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    private float speed = 2f;
     private float jumpForce = 20f;
     private float holdForce = 0.8f;
     private float maxHoldTime = 0.35f;
@@ -54,7 +53,8 @@ public class Player : MonoBehaviour
         // move
         if (moveHorizontal != 0)
         {
-            rb.AddForce(new Vector2(moveHorizontal * speed, 0), ForceMode2D.Impulse);
+            float speed = isGrounded ? 8f : 6f;
+            rb.linearVelocity = new Vector2(moveHorizontal * speed, rb.linearVelocity.y);
             animator.SetBool("isRunning", true);
         }
         else
@@ -118,6 +118,12 @@ public class Player : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    //hang 
+    public void SetHanging(bool hanging)
+    {
+        animator.SetBool("isHanging", hanging);
     }
 
     // SAVE AND LOAD
