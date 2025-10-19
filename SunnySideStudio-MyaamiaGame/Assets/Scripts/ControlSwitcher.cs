@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class ControlSwitcher : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject itemSpawner;
-    public GameObject gameCanvas;
+    private static GameObject player;
+    private static GameObject itemSpawner;
+    private static GameObject gameCanvas;
 
     private bool playerActive = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
+        player = GameObject.Find("Player");
+        itemSpawner = GameObject.Find("ItemSpawner");
+        gameCanvas = GameObject.Find("ItemTextBox");
         itemSpawner.SetActive(false);
         gameCanvas.SetActive(false);
     }

@@ -19,12 +19,12 @@ public class ObjectParent : MonoBehaviour
         collision.isTrigger = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         isColliding = true;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    protected void OnTriggerExit2D(Collider2D collision)
     {
         isColliding = false;
     }

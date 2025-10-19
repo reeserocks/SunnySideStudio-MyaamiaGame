@@ -12,10 +12,10 @@ public class LevelFlag : MonoBehaviour
 
         if (other.gameObject.name == "Player")
         {
-            if (Input.anyKeyDown) {
+           
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 GameManager.UnlockLevel(currentLevel);
-            }
+            
         }
     }
 }

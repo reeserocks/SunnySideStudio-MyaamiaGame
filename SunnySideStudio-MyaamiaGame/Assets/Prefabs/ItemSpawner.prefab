@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2379768495862758826
 Transform:
   m_ObjectHideFlags: 0
@@ -45,13 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   textBar: {fileID: 0}
-  wordBank: {fileID: 4413833085412461409, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
-  player: {fileID: 576119759173723452, guid: 27699d41e19bb3141980627698c81f66, type: 3}
+  wordBank: {fileID: 0}
+  player: {fileID: 0}
   englishValidObjects:
   - {fileID: 1582130717941218663, guid: a9744c7f892653d4f908d58178d1f12d, type: 3}
-  - {fileID: 4304272080189626353, guid: 55bc3edacea752047bb0b65585e8e455, type: 3}
-  - {fileID: 6066764792025320647, guid: dd1343f506274514a9c84d661e7e342a, type: 3}
+  - {fileID: 3042556146871644477, guid: c45554e4d1c927a4a92449f5d76da17a, type: 3}
+  - {fileID: 2576570074179193748, guid: 3b780699259dd7244a057972ce3397c9, type: 3}
+  - {fileID: 7359991139329742585, guid: 45bfad25600d7e1489920dbf6842267b, type: 3}
+  - {fileID: 1944479240615741043, guid: b9de18fa058cfe249bbfd30fb016d94b, type: 3}
   myaamiaValidObjects:
   - awikaakani
-  - mihkintaakan
-  - akootaakan
+  - eesaakan
+  - wiintaakan
+  - waapantenaakan
+  - mihsipakw
