@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WordBankManager
   wordBank: {fileID: 4413833085412461409}
-  positionChange: 0
+  positionChange: -1
 --- !u!1 &5215906852529508550
 GameObject:
   m_ObjectHideFlags: 0

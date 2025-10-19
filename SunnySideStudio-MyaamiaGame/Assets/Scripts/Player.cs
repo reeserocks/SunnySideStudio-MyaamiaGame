@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
         if (isJumping)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            rb.linearVelocityX = Math.Min(rb.linearVelocityX, 1);
             isGrounded = false;
             isJumping = false;
         }
@@ -83,6 +84,7 @@ public class Player : MonoBehaviour
         if (jumpHeld && holdTimeCounter > 0)
         {
             rb.AddForce(Vector2.up * holdForce, ForceMode2D.Impulse);
+            rb.linearVelocityX = Math.Min(rb.linearVelocityX, 1);
             holdTimeCounter -= Time.fixedDeltaTime;
         }
 

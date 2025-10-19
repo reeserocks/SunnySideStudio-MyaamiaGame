@@ -49,7 +49,7 @@ public class Hanger : ObjectParent
         }
     }
 
-    void OnTriggerEnter2D(Collider2D c)
+    new void OnTriggerEnter2D(Collider2D c)
     {
         if (c.CompareTag("Player") && !isPlayerAttached)
         {
