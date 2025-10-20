@@ -34,6 +34,10 @@ public class ObjectParent : MonoBehaviour
     {
         if (!(Input.GetKeyDown(KeyCode.Return)))
         {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            }
             moveHorizontal = Input.GetAxisRaw("Horizontal");
             moveVertical = Input.GetAxisRaw("Vertical");
             rb.AddForce(new Vector2(moveHorizontal * speed, 0), ForceMode2D.Impulse);
