@@ -8,11 +8,16 @@ using UnityEngine.UI;
 public class ItemSpawner : MonoBehaviour
 {
     public TMP_InputField textBar;
-    public GameObject wordBank;
+    private GameObject wordBank;
     public GameObject player;
     private string currentText = "";
     public List<GameObject> englishValidObjects = new List<GameObject>();
     public List<string> myaamiaValidObjects = new List<string>();
+
+    private void Awake()
+    {
+        wordBank = GameObject.Find("WordBank");
+    }
 
     // Update is called once per frame
     void Update()
@@ -22,7 +27,7 @@ public class ItemSpawner : MonoBehaviour
             int objectPos = containsObject(currentText);
             if (objectPos >= 0)
             {
-                wordBank.SetActive(false);
+                wordBank.GetComponent<CanvasGroup>().alpha = 0f;
                 Vector3 offset = new Vector3(3.5f, 3f, 0);
                 Instantiate(englishValidObjects[objectPos], player.transform.position + offset, Quaternion.identity);
                 //Play loud correct buzzer sound
@@ -40,16 +45,22 @@ public class ItemSpawner : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            if (wordBank.activeSelf)
+            Debug.Log("Switching word bank mode");
+            if (wordBank.GetComponent<CanvasGroup>().alpha == 0f)
             {
-                wordBank.SetActive(false);
+                wordBank.GetComponent<CanvasGroup>().alpha = 1f;
             }
             else
             {
-                wordBank.SetActive(true);
+                wordBank.GetComponent<CanvasGroup>().alpha = 0f;
             }
         }
-        else if (Input.inputString != "") {
+        else if (Input.GetKeyDown(KeyCode.Q)) {
+            currentText += "\u015D";
+            textBar.text = currentText;
+        }
+        else if (Input.inputString != "")
+        {
             currentText += Input.inputString;
             textBar.text = currentText;
         }

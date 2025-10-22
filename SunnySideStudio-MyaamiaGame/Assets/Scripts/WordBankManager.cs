@@ -9,11 +9,11 @@ public class WordBankManager : MonoBehaviour
     public GameObject wordBank;
     public int positionChange;
     private static List<bool> discoveredWords = Enumerable.Repeat<bool>(false, 15).ToList();
+    private bool isActive;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        wordBank.SetActive(false);
         updateDiscoveredWords();
         List<GameObject> childButtons = new List<GameObject>();
         foreach (Transform button in transform)

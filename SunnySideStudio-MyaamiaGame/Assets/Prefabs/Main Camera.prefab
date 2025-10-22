@@ -150,4 +150,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752c06c3c31a7ea43bdea2b0c35d5aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
-  player: {fileID: 576119759173723452, guid: 27699d41e19bb3141980627698c81f66, type: 3}
+  player: {fileID: 3878587466434581286, guid: 27699d41e19bb3141980627698c81f66, type: 3}
