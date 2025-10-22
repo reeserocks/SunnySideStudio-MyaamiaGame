@@ -56,7 +56,7 @@ public class ItemSpawner : MonoBehaviour
             }
         }
         else if (Input.GetKeyDown(KeyCode.Q)) {
-            currentText += "\u015D";
+            currentText += "\u0161";
             textBar.text = currentText;
         }
         else if (Input.inputString != "")
