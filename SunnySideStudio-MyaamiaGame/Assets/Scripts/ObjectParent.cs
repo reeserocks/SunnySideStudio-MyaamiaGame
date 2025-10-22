@@ -6,11 +6,11 @@ public class ObjectParent : MonoBehaviour
 {
     public Rigidbody2D rb;
     public BoxCollider2D collision;
-    private float maxVelocity = 5.0f;
-    private float speed = .1f;
-    private float moveHorizontal;
-    private float moveVertical;
-    private bool isColliding = false;
+    private float maxVelocity = 2.0f;
+    protected float speed = .1f;
+    protected float moveHorizontal;
+    protected float moveVertical;
+    protected bool isColliding = false;
 
     protected void Awake()
     {
@@ -19,12 +19,12 @@ public class ObjectParent : MonoBehaviour
         collision.isTrigger = true;
     }
 
-    protected void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         isColliding = true;
     }
 
-    protected void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         isColliding = false;
     }
@@ -47,7 +47,7 @@ public class ObjectParent : MonoBehaviour
         else {
             if (!isColliding)
             {
-                rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 rb.gravityScale = 1;
                 collision.isTrigger = false;
                 this.enabled = false;
