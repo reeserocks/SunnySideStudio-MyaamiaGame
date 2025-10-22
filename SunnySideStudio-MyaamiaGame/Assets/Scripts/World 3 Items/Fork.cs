@@ -2,19 +2,22 @@ using UnityEngine;
 
 public class Fork : ObjectParent
 {
-    public bool isInWall = false;
-    public bool tooFarIn = false;
+    private bool isInWall = false;
+    private bool tooFarIn = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isInWall)
         {
             tooFarIn = true;
+            isColliding = true;
         }
         else
         {
             isInWall = true;
+            isColliding = false;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -35,6 +38,7 @@ public class Fork : ObjectParent
 
     private new void Update()
     {
+        
         if (!(Input.GetKeyDown(KeyCode.Return)))
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -56,7 +60,7 @@ public class Fork : ObjectParent
                 collision.isTrigger = false;
                 this.enabled = false;
             }
-            else if (tooFarIn)
+            else if (tooFarIn || isColliding)
             {
                 //play sound to indicate failure to spawn
             }

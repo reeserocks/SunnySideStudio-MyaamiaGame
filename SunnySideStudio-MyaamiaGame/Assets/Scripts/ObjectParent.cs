@@ -63,6 +63,8 @@ public class ObjectParent : MonoBehaviour
     {
         float cappedXVelocity = Mathf.Min(Mathf.Abs(rb.linearVelocityX), maxVelocity) * Mathf.Sign(rb.linearVelocityX);
         float cappedYVelocity = Mathf.Min(Mathf.Abs(rb.linearVelocityY), maxVelocity) * Mathf.Sign(rb.linearVelocityY);
+        if (moveHorizontal == 0) { cappedXVelocity = 0; }
+        if (moveVertical == 0) {cappedYVelocity = 0; }
 
         rb.linearVelocity = new Vector2(cappedXVelocity, cappedYVelocity);
     }
