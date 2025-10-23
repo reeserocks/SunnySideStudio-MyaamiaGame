@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectParent
   rb: {fileID: 0}
   collision: {fileID: 0}
+  isColliding: 0
 --- !u!50 &3845733176094498761
 Rigidbody2D:
   serializedVersion: 5
@@ -75,7 +76,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &2450808274860976495
 BoxCollider2D:
   m_ObjectHideFlags: 0

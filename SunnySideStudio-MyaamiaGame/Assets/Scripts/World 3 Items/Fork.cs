@@ -57,7 +57,7 @@ public class Fork : ObjectParent
             {
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                 rb.gravityScale = 1;
-                collision.isTrigger = false;
+                thisCollision.isTrigger = false;
                 this.enabled = false;
             }
             else if (tooFarIn || isColliding)
@@ -68,7 +68,7 @@ public class Fork : ObjectParent
             {
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 rb.gravityScale = 1;
-                collision.isTrigger = false;
+                thisCollision.isTrigger = false;
                 this.enabled = false;
             }
         }

@@ -16,7 +16,7 @@ public class Hanger : ObjectParent
 
     void Start()
     {
-        collision.isTrigger = true;
+        thisCollision.isTrigger = true;
 
         rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
     }

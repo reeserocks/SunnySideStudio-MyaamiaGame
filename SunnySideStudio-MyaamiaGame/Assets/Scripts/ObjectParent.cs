@@ -5,28 +5,34 @@ using UnityEngine;
 public class ObjectParent : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public BoxCollider2D collision;
-    private float maxVelocity = 2.0f;
+    public BoxCollider2D thisCollision;
+    private float maxVelocity = 4.0f;
     protected float speed = .1f;
     protected float moveHorizontal;
     protected float moveVertical;
-    protected bool isColliding = false;
+    public bool isColliding = false;
+    private int collisionCount = 0;
 
     protected void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        collision = GetComponent<BoxCollider2D>();
-        collision.isTrigger = true;
+        thisCollision = GetComponent<BoxCollider2D>();
+        thisCollision.isTrigger = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isColliding = true;
+        collisionCount++;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isColliding = false;
+        collisionCount--;
+        if (collisionCount == 0)
+        {
+            isColliding = false;
+        }
     }
 
     // Update is called once per frame
@@ -47,9 +53,9 @@ public class ObjectParent : MonoBehaviour
         else {
             if (!isColliding)
             {
-                rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+                //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 rb.gravityScale = 1;
-                collision.isTrigger = false;
+                thisCollision.isTrigger = false;
                 this.enabled = false;
             }
             else
