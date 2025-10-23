@@ -11,4 +11,10 @@ public class WorldSelect : MonoBehaviour
         AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position);
         SceneManager.LoadScene("World" + world.ToString() +"LevelSelect");
     }
+
+    public void QuitGame()
+    {
+        AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position);
+        Application.Quit();
+    }
 }

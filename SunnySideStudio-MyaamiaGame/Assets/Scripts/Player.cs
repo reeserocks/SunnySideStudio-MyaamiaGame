@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
         GameManager.Instance.Player = this;
     }
 
+
     void Update()
     {
         // get move input
@@ -50,6 +51,13 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        // don't override win anim
+        if (animator.GetBool("isWin"))
+        {
+            moveHorizontal = 0;
+            return;
+        }
+
         // move
         if (moveHorizontal != 0)
         {
@@ -126,6 +134,12 @@ public class Player : MonoBehaviour
     public void SetHanging(bool hanging)
     {
         animator.SetBool("isHanging", hanging);
+    }
+
+    //win
+    public void SetWin(bool win)
+    {
+        animator.SetBool("isWin", win);
     }
 
     // SAVE AND LOAD

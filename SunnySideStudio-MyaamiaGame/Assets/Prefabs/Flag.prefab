@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelFlag
   currentLevel: 0
+  levelCompletePrefab: {fileID: 4475989357868298940, guid: dbe29ba9fba12bd4ebcf2b3fd930dc9a, type: 3}
 --- !u!95 &5398752136176823459
 Animator:
   serializedVersion: 7
