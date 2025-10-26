@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    private float jumpForce = 20f;
+    private float jumpForce = 23f;
     private float holdForce = 0.8f;
     private float maxHoldTime = 0.35f;
 

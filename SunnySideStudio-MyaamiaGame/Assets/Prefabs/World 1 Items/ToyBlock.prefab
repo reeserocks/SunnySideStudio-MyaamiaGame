@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectParent
   rb: {fileID: 5843610858723170718}
-  collision: {fileID: 690896186185009318}
+  thisCollision: {fileID: 0}
+  isColliding: 0
 --- !u!50 &5843610858723170718
 Rigidbody2D:
   serializedVersion: 5
@@ -119,7 +120,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
