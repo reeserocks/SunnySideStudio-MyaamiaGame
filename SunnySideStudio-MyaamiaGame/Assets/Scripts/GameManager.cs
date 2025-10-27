@@ -1,5 +1,6 @@
 //GAMEMANAGER.CS
 
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,12 +28,18 @@ public class GameManager : MonoBehaviour
     public Player Player { get; set; }
     public static PlayerSaveData playerSaveData;
 
+    private GameObject canvasInstance;
+
+    private GameObject menus;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            SpawnCanvas();
         }
         else
         {
@@ -42,15 +49,38 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
         {
             SaveSystem.Save();
         }
 
-        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
+        if (Keyboard.current.numpad2Key.wasPressedThisFrame)
         {
             SaveSystem.Load();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menus.SetActive(!menus.activeSelf);
+            Cursor.visible = true;
+        }
+    }
+
+    private void SpawnCanvas()
+    {
+        if (canvasInstance != null)
+        {
+            return;
+        }
+
+        GameObject canvasPrefab = Resources.Load<GameObject>("Canvas");
+
+        if (canvasPrefab != null)
+        {
+            canvasInstance = Instantiate(canvasPrefab);
+            DontDestroyOnLoad(canvasInstance);
+        }
+        menus = canvasInstance.transform.Find("Menus")?.gameObject;
     }
 
     public static void UnlockLevel(int currentLevel)

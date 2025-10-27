@@ -1,5 +1,6 @@
 //LEVELSELECT.CS
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -33,5 +34,7 @@ public class LevelSelect : MonoBehaviour
     void LoadLevel(int level)
     {
         SceneManager.LoadScene("Level" + level);
+        
+        Cursor.visible = false;
     }
 }

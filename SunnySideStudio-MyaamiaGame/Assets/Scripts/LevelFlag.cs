@@ -12,6 +12,8 @@ public class LevelFlag : MonoBehaviour
     private TextMeshProUGUI levelCompleteText;
     private float fadeDuration = 0.5f;
 
+    [SerializeField] AudioClip audioClip;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "Player")
@@ -19,18 +21,41 @@ public class LevelFlag : MonoBehaviour
             // player anim
             Player player = other.GetComponent<Player>();
             player.SetWin(true);
+            AudioSource.PlayClipAtPoint(audioClip, Camera.main.transform.position);
 
             // level complete!
             Canvas canvas = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>();
             Transform textTransform = canvas.transform.Find("LevelCompleteTxt");
             levelCompleteText = textTransform.GetComponent<TextMeshProUGUI>();
-            
-            StartCoroutine(ShowAndFadeText());
-            StartCoroutine(WaitForWinAnimation(player));
 
             SaveSystem.Save();
             GameManager.UnlockLevel(currentLevel);
+
+            StartCoroutine(HandleWinSequence(player));
         }
+    }
+
+    private IEnumerator HandleWinSequence(Player player)
+    {
+        yield return StartCoroutine(ShowAndFadeText());
+
+        yield return StartCoroutine(WaitForWinAnimation(player));
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        int levelNum = 0;
+        int worldNum = 1;
+
+        if (sceneName.StartsWith("Level"))
+        {
+            int.TryParse(sceneName.Replace("Level", ""), out levelNum);
+            worldNum = (levelNum - 1) / 10 + 1;
+        }
+
+        PlayerPrefs.SetInt("CurrentWorld", worldNum);
+        PlayerPrefs.SetInt("LastCompletedLevel", levelNum);
+        PlayerPrefs.SetInt("NextLevelToLoad", SceneManager.GetActiveScene().buildIndex + 1);
+
+        SceneManager.LoadScene("WordReview");
     }
 
     private IEnumerator ShowAndFadeText()
@@ -78,8 +103,15 @@ public class LevelFlag : MonoBehaviour
             !anim.IsInTransition(0));
 
         player.SetWin(false);
-        yield return new WaitForSeconds(0.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        StartCoroutine(UpdateHUD());
     }
 
+    private IEnumerator UpdateHUD()
+    {
+        yield return new WaitForSeconds(0.1f);
+        GameObject levelUIObj = GameObject.FindWithTag("LevelUI");
+        UpdateHUD levelUI = levelUIObj.GetComponent<UpdateHUD>();
+        levelUI.UpdateLevelDisplay();
+    }
 }
