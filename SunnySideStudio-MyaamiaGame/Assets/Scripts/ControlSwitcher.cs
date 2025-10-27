@@ -5,6 +5,8 @@ public class ControlSwitcher : MonoBehaviour
     private static GameObject player;
     private static GameObject itemSpawner;
     private static GameObject gameCanvas;
+    private static GameObject inCamera;
+    private static GameObject outCamera;
 
     private bool playerActive = true;
 
@@ -14,8 +16,12 @@ public class ControlSwitcher : MonoBehaviour
         player = GameObject.Find("Player");
         itemSpawner = GameObject.Find("ItemSpawner");
         gameCanvas = GameObject.Find("ItemTextBox");
+        inCamera = GameObject.Find("InCamera");
+        outCamera = GameObject.Find("OutCamera");
         itemSpawner.SetActive(false);
         gameCanvas.SetActive(false);
+        inCamera.SetActive(true);
+        outCamera.SetActive(false);
     }
 
     // Update is called once per frame
@@ -25,6 +31,16 @@ public class ControlSwitcher : MonoBehaviour
         {
             SwitchController();
         }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SwitchCamera();
+        }
+    }
+
+    void SwitchCamera()
+    {
+        inCamera.SetActive(!inCamera.activeSelf);
+        outCamera.SetActive(!outCamera.activeSelf);
     }
 
     void SwitchController()
