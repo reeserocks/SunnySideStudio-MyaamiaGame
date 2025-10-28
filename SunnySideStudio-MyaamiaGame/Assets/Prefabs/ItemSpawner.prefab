@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSpawner
   textBar: {fileID: 0}
+  wordBank: {fileID: 0}
   player: {fileID: 576119759173723452, guid: 27699d41e19bb3141980627698c81f66, type: 3}
+  bankCanvas: {fileID: 0}
   englishValidObjects:
   - {fileID: 1582130717941218663, guid: a9744c7f892653d4f908d58178d1f12d, type: 3}
   - {fileID: 3042556146871644477, guid: c45554e4d1c927a4a92449f5d76da17a, type: 3}
@@ -55,6 +57,6 @@ MonoBehaviour:
   myaamiaValidObjects:
   - awikaakani
   - eesaakan
-  - wiintaakan
+  - wiintaakani
   - waapantenaakan
   - "mih\u0161ipakw"

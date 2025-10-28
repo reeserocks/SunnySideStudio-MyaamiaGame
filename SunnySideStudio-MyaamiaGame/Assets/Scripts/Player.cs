@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     private bool isJumping;
     private bool jumpHeld;
 
-    private void Awake()
+    private void Start()
     {
         GameManager.Instance.Player = this;
     }
@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         if (isJumping)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            rb.linearVelocityX = Math.Min(rb.linearVelocityX, 1);
+            rb.linearVelocityX = Math.Min(rb.linearVelocityX, 5);
             isGrounded = false;
             isJumping = false;
         }

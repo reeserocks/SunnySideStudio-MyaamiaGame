@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8381160256995195659, guid: 6a01056e854b71849b80807c96e2d2f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -543,10 +547,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform1 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 6664711403541443260, guid: 8c494a42aacffac47a8b198dd07b837b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -574,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3878587466434581286, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3878587466434581286, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_LocalRotation.w
@@ -628,10 +628,6 @@ PrefabInstance:
     - target: {fileID: 4413833085412461409, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
       propertyPath: m_Name
       value: WordBank
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413833085412461409, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4413833085412461409, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -731,14 +727,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7168462615425178201, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8597170135309467259, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8909606952000867398, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
-      propertyPath: positionChange
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9070229562397669342, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
@@ -924,7 +912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200111929660954914, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 2200111929660954914, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -954,6 +942,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7033596898866546726, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c474724e732d2a499fdbb49705b3531, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -967,14 +959,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3712575560218129047, guid: 8c494a42aacffac47a8b198dd07b837b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76269686
-      objectReference: {fileID: 0}
-    - target: {fileID: 3712575560218129047, guid: 8c494a42aacffac47a8b198dd07b837b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5025
-      objectReference: {fileID: 0}
     - target: {fileID: 3712575560218129047, guid: 8c494a42aacffac47a8b198dd07b837b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.3298
@@ -1018,10 +1002,6 @@ PrefabInstance:
     - target: {fileID: 4050152447864895630, guid: 8c494a42aacffac47a8b198dd07b837b, type: 3}
       propertyPath: m_Name
       value: Platform1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6664711403541443260, guid: 8c494a42aacffac47a8b198dd07b837b, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

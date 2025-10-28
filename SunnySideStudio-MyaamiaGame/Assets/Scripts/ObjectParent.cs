@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class ObjectParent : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public BoxCollider2D thisCollision;
+    protected Rigidbody2D rb;
+    protected BoxCollider2D thisCollision;
     private float maxVelocity = 4.0f;
     protected float speed = .1f;
     protected float moveHorizontal;
     protected float moveVertical;
-    public bool isColliding = false;
-    private int collisionCount = 0;
+    protected bool isColliding = false;
+    protected int collisionCount = 0;
 
     protected void Awake()
     {

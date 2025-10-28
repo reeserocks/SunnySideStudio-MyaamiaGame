@@ -8,15 +8,22 @@ using UnityEngine.UI;
 public class ItemSpawner : MonoBehaviour
 {
     public TMP_InputField textBar;
-    private GameObject wordBank;
+    public GameObject wordBank;
     public GameObject player;
     private string currentText = "";
+    public CanvasGroup bankCanvas;
     public List<GameObject> englishValidObjects = new List<GameObject>();
     public List<string> myaamiaValidObjects = new List<string>();
 
-    private void Awake()
+    private void Start()
     {
         wordBank = GameObject.Find("WordBank");
+    }
+
+    private void Awake()
+    {
+        player = GameObject.Find("Player");
+        bankCanvas = wordBank.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
@@ -27,9 +34,10 @@ public class ItemSpawner : MonoBehaviour
             int objectPos = containsObject(currentText);
             if (objectPos >= 0)
             {
-                wordBank.GetComponent<CanvasGroup>().alpha = 0f;
+                bankCanvas.alpha = 0f;
                 Vector3 offset = new Vector3(3.5f, 3f, 0);
-                Instantiate(englishValidObjects[objectPos], player.transform.position + offset, Quaternion.identity);
+                Debug.Log("Creating object: " + englishValidObjects[objectPos].name);
+                Instantiate(englishValidObjects[objectPos], new Vector3(0,0, -0.1f), Quaternion.identity);
                 //Play loud correct buzzer sound
             } else
             {
@@ -46,13 +54,13 @@ public class ItemSpawner : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             Debug.Log("Switching word bank mode");
-            if (wordBank.GetComponent<CanvasGroup>().alpha == 0f)
+            if (bankCanvas.alpha == 0f)
             {
-                wordBank.GetComponent<CanvasGroup>().alpha = 1f;
+                bankCanvas.alpha = 1f;
             }
             else
             {
-                wordBank.GetComponent<CanvasGroup>().alpha = 0f;
+                bankCanvas.alpha = 0f;
             }
         }
         else if (Input.GetKeyDown(KeyCode.Q)) {

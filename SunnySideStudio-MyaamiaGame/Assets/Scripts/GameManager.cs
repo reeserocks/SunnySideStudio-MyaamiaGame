@@ -1,5 +1,7 @@
 //GAMEMANAGER.CS
 
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     private GameObject canvasInstance;
 
     private GameObject menus;
+    public static List<bool> discoveredWords = Enumerable.Repeat<bool>(false, 15).ToList();
 
     private void Awake()
     {
