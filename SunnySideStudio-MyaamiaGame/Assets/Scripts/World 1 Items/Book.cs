@@ -7,5 +7,7 @@ public class Book : ObjectParent
         rb = GetComponent<Rigidbody2D>();
         thisCollision = GetComponent<BoxCollider2D>();
         thisCollision.isTrigger = true;
+        Transform thisTransform = GetComponent<Transform>();
+        thisTransform.localRotation = new Quaternion(0,0,90,0);
     }
 }
