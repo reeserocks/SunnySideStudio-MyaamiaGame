@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\World 3 Items\Fork.cs" />
     <Compile Include="Assets\Scripts\WordReview.cs" />
     <Compile Include="Assets\Scripts\ObjectParent.cs" />
+    <Compile Include="Assets\Scripts\World 1 Items\Book.cs" />
     <Compile Include="Assets\Scripts\ItemSpawner.cs" />
     <Compile Include="Assets\Scripts\Scene Handling\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

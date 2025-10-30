@@ -41,20 +41,6 @@ public class LevelFlag : MonoBehaviour
 
         yield return StartCoroutine(WaitForWinAnimation(player));
 
-        string sceneName = SceneManager.GetActiveScene().name;
-        int levelNum = 0;
-        int worldNum = 1;
-
-        if (sceneName.StartsWith("Level"))
-        {
-            int.TryParse(sceneName.Replace("Level", ""), out levelNum);
-            worldNum = (levelNum - 1) / 10 + 1;
-        }
-
-        PlayerPrefs.SetInt("CurrentWorld", worldNum);
-        PlayerPrefs.SetInt("LastCompletedLevel", levelNum);
-        PlayerPrefs.SetInt("NextLevelToLoad", SceneManager.GetActiveScene().buildIndex + 1);
-
         SceneManager.LoadScene("WordReview");
     }
 
@@ -104,14 +90,5 @@ public class LevelFlag : MonoBehaviour
 
         player.SetWin(false);
 
-        StartCoroutine(UpdateHUD());
-    }
-
-    private IEnumerator UpdateHUD()
-    {
-        yield return new WaitForSeconds(0.1f);
-        GameObject levelUIObj = GameObject.FindWithTag("LevelUI");
-        UpdateHUD levelUI = levelUIObj.GetComponent<UpdateHUD>();
-        levelUI.UpdateLevelDisplay();
     }
 }

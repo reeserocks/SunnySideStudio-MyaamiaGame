@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.UI;
 
 public class WordReviewScreen : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class WordReviewScreen : MonoBehaviour
     public TextMeshProUGUI myaamiaText;
     public TextMeshProUGUI englishText;
     public TextMeshProUGUI descriptionText;
+    public AspectRatioFitter imageAspectFitter;
 
     private List<bool> discoveredWords;
     private float fadeDuration = 0.6f;
@@ -27,11 +29,21 @@ public class WordReviewScreen : MonoBehaviour
         group.alpha = 0f;
         discoveredWords = WordBankManager.GetDiscoveredWords();
 
-        int world = PlayerPrefs.GetInt("CurrentWorld", 1);
-        int nextLevelIndex = PlayerPrefs.GetInt("NextLevelToLoad", 2);
+        int world = GameManager.playerSaveData.worldUnlocked;
+        if (world <= 0)
+        {
+            world = 1;
+        }
+
         Image background = GameObject.Find("Background").GetComponent<Image>();
-        Sprite bg = Resources.Load<Sprite>("world" + world + "_lvlSelectBG");
-        background.sprite = bg;
+        Sprite bg = Resources.Load<Sprite>($"world{world}_lvlSelectBG");
+
+        if (bg != null)
+        {
+            background.sprite = bg;
+        }
+
+        imageAspectFitter = wordImage.GetComponent<AspectRatioFitter>();
 
         ShowRandomWord();
         StartCoroutine(FadeIn());
@@ -64,11 +76,9 @@ public class WordReviewScreen : MonoBehaviour
             englishText.text = data.englishTranslation;
             descriptionText.text = data.description;
             wordImage.sprite = data.image;
-        }
-        else
-        {
-            myaamiaText.text = "Missing data!";
-            Debug.LogWarning($"WordData not found for index {randomIndex}");
+            float width = data.image.rect.width;
+            float height = data.image.rect.height;
+            imageAspectFitter.aspectRatio = width / height;
         }
     }
 

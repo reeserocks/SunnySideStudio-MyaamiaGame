@@ -102,5 +102,8 @@ public class SaveSystem
 
         // level data
         GameManager.playerSaveData.levelUnlocked = _saveData.PlayerData.levelUnlocked;
+
+        // world data
+        GameManager.playerSaveData.worldUnlocked = _saveData.PlayerData.worldUnlocked;
     }
 }

@@ -470,6 +470,7 @@
 "Assets/Scripts/WordBankManager.cs"
 "Assets/Scripts/WordData.cs"
 "Assets/Scripts/WordReview.cs"
+"Assets/Scripts/World 1 Items/Book.cs"
 "Assets/Scripts/World 1 Items/Hanger.cs"
 "Assets/Scripts/World 1 Items/Pillow.cs"
 "Assets/Scripts/World 3 Items/Fork.cs"

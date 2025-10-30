@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class UpdateHUD : MonoBehaviour
 {
@@ -11,8 +12,14 @@ public class UpdateHUD : MonoBehaviour
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] Sprite[] worldIcons;
 
-    private void Awake()
+    private void Start()
     {
+        StartCoroutine(Wait());
+    }
+
+    private IEnumerator Wait()
+    {
+        yield return null;
         UpdateLevelDisplay();
     }
 
