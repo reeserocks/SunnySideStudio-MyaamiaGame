@@ -573,10 +573,6 @@ PrefabInstance:
       value: 1.1000001
       objectReference: {fileID: 0}
     - target: {fileID: 3878587466434581286, guid: 27699d41e19bb3141980627698c81f66, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3878587466434581286, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
@@ -907,10 +903,6 @@ PrefabInstance:
       value: 1.3400002
       objectReference: {fileID: 0}
     - target: {fileID: 2200111929660954914, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 2200111929660954914, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
@@ -938,10 +930,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7033596898866546726, guid: 23a185f4eb29a8b4ea2e544de782683c, type: 3}
-      propertyPath: audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8c474724e732d2a499fdbb49705b3531, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
