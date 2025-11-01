@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     private GameObject menus;
 
     public static List<bool> discoveredWords = Enumerable.Repeat<bool>(false, 15).ToList();
+    public static bool isPlacing = false;
 
     private void Awake()
     {

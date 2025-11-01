@@ -66,6 +66,7 @@ public class ObjectParent : MonoBehaviour
                 //rb.constraints = RigidbodyConstraints2D.FreezeRotation;
                 rb.gravityScale = 1;
                 thisCollision.isTrigger = false;
+                GameManager.isPlacing = false;
                 this.enabled = false;
                 spriteRen.color = new Color(1, 1, 1, 1f);
             }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class ControlSwitcher : MonoBehaviour
 {
     private static Player player;
-    private static GameObject itemSpawner;
+    private static ItemSpawner itemSpawner;
     private static GameObject gameCanvas;
     private static GameObject inCamera;
     private static GameObject outCamera;
@@ -14,11 +14,10 @@ public class ControlSwitcher : MonoBehaviour
     void Awake()
     {
         player = Player.FindFirstObjectByType<Player>();
-        itemSpawner = GameObject.Find("ItemSpawner");
+        itemSpawner = ItemSpawner.FindAnyObjectByType<ItemSpawner>();
         gameCanvas = GameObject.Find("ItemTextBox");
         inCamera = GameObject.Find("InCamera");
         outCamera = GameObject.Find("OutCamera");
-        itemSpawner.SetActive(false);
         gameCanvas.SetActive(false);
         inCamera.SetActive(true);
         outCamera.SetActive(false);
@@ -27,7 +26,7 @@ public class ControlSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && GameManager.isPlacing == false)
         {
             SwitchController();
         }
@@ -48,7 +47,7 @@ public class ControlSwitcher : MonoBehaviour
         if (playerActive)
         {
             player.canMove = false;
-            itemSpawner.SetActive(true);
+            itemSpawner.canType = true;
             gameCanvas.SetActive(true);
             AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("page_turn"), Camera.main.transform.position);
             Debug.Log("Switching to typing mode");
@@ -56,7 +55,7 @@ public class ControlSwitcher : MonoBehaviour
         else
         {
             player.canMove = true;
-            itemSpawner.SetActive(false);
+            itemSpawner.canType = false;
             gameCanvas.SetActive(false);
             AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("page_turn"), Camera.main.transform.position);
             Debug.Log("Switching to player mode");

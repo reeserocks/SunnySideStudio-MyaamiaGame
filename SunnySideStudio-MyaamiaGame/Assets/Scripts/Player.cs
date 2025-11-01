@@ -20,8 +20,8 @@ public class Player : MonoBehaviour
     private float moveVertical;
     private float holdTimeCounter;
 
-    private bool isGrounded;
-    private bool isJumping;
+    public bool isGrounded;
+    public bool isJumping;
     private bool jumpHeld;
     public bool canMove;
 
@@ -47,12 +47,14 @@ public class Player : MonoBehaviour
                 jumpHeld = true;
                 holdTimeCounter = maxHoldTime;
             }
+
+            // keep jumping
+            if (moveVertical < 0)
+            {
+                jumpHeld = false;
+            }
         }
-        // keep jumping
-        if (moveVertical < 0)
-        {
-            jumpHeld = false;
-        }
+        
         if (transform.position.y < -5)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -69,7 +71,7 @@ public class Player : MonoBehaviour
         }
 
         // move
-        if (moveHorizontal != 0)
+        if (moveHorizontal != 0 && canMove)
         {
             float speed = isGrounded ? 8f : 6f;
             rb.linearVelocity = new Vector2(moveHorizontal * speed, rb.linearVelocity.y);
@@ -91,7 +93,7 @@ public class Player : MonoBehaviour
         }
 
         // jump
-        if (isJumping)
+        if (isJumping && canMove)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             rb.linearVelocityX = Math.Min(rb.linearVelocityX, 5);
@@ -99,7 +101,7 @@ public class Player : MonoBehaviour
             isJumping = false;
         }
         // keep jumping 
-        if (jumpHeld && holdTimeCounter > 0)
+        if (jumpHeld && holdTimeCounter > 0 && canMove)
         {
             rb.AddForce(Vector2.up * holdForce, ForceMode2D.Impulse);
             rb.linearVelocityX = Math.Min(rb.linearVelocityX, 1);
@@ -131,7 +133,7 @@ public class Player : MonoBehaviour
     // check if is grounded
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ground"))
+        if (collision.CompareTag("Ground") && canMove)
         {
             isGrounded = true;
             jumpHeld = false;
@@ -139,7 +141,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ground"))
+        if (collision.CompareTag("Ground") && canMove)
         {
             isGrounded = false;
         }

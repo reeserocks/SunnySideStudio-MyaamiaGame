@@ -16,7 +16,7 @@ public class ItemSpawner : MonoBehaviour
     public List<GameObject> englishValidObjects = new List<GameObject>();
     public List<string> myaamiaValidObjects = new List<string>();
 
-
+    public bool canType = false;
     private Stack<GameObject> objectsStack = new Stack<GameObject>();
     private int itemCount = 0;
 
@@ -35,69 +35,82 @@ public class ItemSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (canType)
         {
-            Debug.Log("Submitting word: " + currentText);
-            if (itemCount < 5)
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                int objectPos = containsObject(currentText);
-                if (objectPos >= 0)
+                Debug.Log("Submitting word: " + currentText);
+                if (itemCount < 5)
                 {
-                    itemCount++;
-                    bankCanvas.alpha = 0f;
-                    Vector3 offset = new Vector3(2f, 1f, 0);
-                    Debug.Log("Creating object: " + englishValidObjects[objectPos].name);
-                    AudioSource.PlayClipAtPoint(audioClipSuccess, Camera.main.transform.position);
-                    GameObject objectSpawned = Instantiate(englishValidObjects[objectPos], player.transform.position + offset, Quaternion.identity);
-                    objectsStack.Push(objectSpawned);
+                    int objectPos = containsObject(currentText);
+                    if (objectPos >= 0)
+                    {
+                        itemCount++;
+                        bankCanvas.alpha = 0f;
+                        Vector3 offset = new Vector3(2f, 1f, 0);
+                        Debug.Log("Creating object: " + englishValidObjects[objectPos].name);
+                        AudioSource.PlayClipAtPoint(audioClipSuccess, Camera.main.transform.position);
+                        GameObject objectSpawned = Instantiate(englishValidObjects[objectPos], player.transform.position + offset, Quaternion.identity);
+                        objectsStack.Push(objectSpawned);
+                        GameManager.isPlacing = true;
+                    }
+                    else
+                    {
+                        AudioSource.PlayClipAtPoint(audioClipFail, Camera.main.transform.position);
+                    }
+                    currentText = string.Empty;
+                    textBar.text = string.Empty;
                 }
                 else
                 {
-                    AudioSource.PlayClipAtPoint(audioClipFail, Camera.main.transform.position);
+                    Debug.Log("Too many items spawned. Will be added to UI later");
+                    currentText = string.Empty;
+                    textBar.text = string.Empty;
                 }
-                currentText = string.Empty;
-                textBar.text = string.Empty;
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.Backspace))
             {
-                Debug.Log("Too many items spawned. Will be added to UI later");
-                currentText = string.Empty;
-                textBar.text = string.Empty;
+                currentText = currentText.Remove(currentText.Length - 1);
+                textBar.text = currentText;
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            currentText = currentText.Remove(currentText.Length - 1);
-            textBar.text = currentText;
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            Debug.Log("Switching word bank mode");
-            if (bankCanvas.alpha == 0f)
+            else if (Input.GetKeyDown(KeyCode.LeftControl))
             {
-                bankCanvas.alpha = 1f;
+                Debug.Log("Switching word bank mode");
+                if (bankCanvas.alpha == 0f)
+                {
+                    bankCanvas.alpha = 1f;
+                }
+                else
+                {
+                    bankCanvas.alpha = 0f;
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.Q))
             {
-                bankCanvas.alpha = 0f;
+                currentText += "\u0161";
+                textBar.text = currentText;
+            }
+            else if (Input.GetKeyDown(KeyCode.R))
+            {
+                Destroy(objectsStack.Pop());
+                itemCount--;
+            }
+            else if (Input.GetKeyDown(KeyCode.Space))
+            {
+                currentText = "";
+                textBar.text = currentText;
+            }
+            else if (Input.inputString != "")
+            {
+                currentText += Input.inputString;
+                textBar.text = currentText;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Q))
+        else if (Input.GetKeyDown(KeyCode.Return) && GameManager.isPlacing == false)
         {
-            currentText += "\u0161";
-            textBar.text = currentText;
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            Destroy(objectsStack.Pop());
-            itemCount--;
-        }
-        else if (Input.inputString != "")
-        {
-            currentText += Input.inputString;
-            textBar.text = currentText;
+            canType = true;
         }
     }
 
