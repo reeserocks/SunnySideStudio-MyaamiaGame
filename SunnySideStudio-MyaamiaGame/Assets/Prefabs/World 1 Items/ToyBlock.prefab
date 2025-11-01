@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3392826227582950823, guid: 1d0b59568dbaf9e49a7f6205f54801e4, type: 3}
-  m_Color: {r: 0.24116908, g: 0.39599895, b: 0.84276724, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,9 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03eb94f8b08d6fb458576de6944ee1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectParent
-  rb: {fileID: 5843610858723170718}
-  thisCollision: {fileID: 0}
-  isColliding: 0
 --- !u!50 &5843610858723170718
 Rigidbody2D:
   serializedVersion: 5

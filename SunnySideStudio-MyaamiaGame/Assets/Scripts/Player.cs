@@ -1,4 +1,4 @@
-//PLAYERMOVEMENT.CS
+//PLAYER.CS
 
 using System;
 using UnityEngine;
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
             holdTimeCounter = maxHoldTime;
         }
         // keep jumping
-        if (moveVertical <= 0)
+        if (moveVertical < 0)
         {
             jumpHeld = false;
         }
@@ -100,6 +100,11 @@ public class Player : MonoBehaviour
             rb.linearVelocityX = Math.Min(rb.linearVelocityX, 1);
             holdTimeCounter -= Time.fixedDeltaTime;
         }
+        // no y velocity when grounded
+        if (isGrounded)
+        {
+            rb.linearVelocityY = 0;
+        }
 
         // jump animations
         if (rb.linearVelocity.y == 0)
@@ -152,12 +157,14 @@ public class Player : MonoBehaviour
     {
         data.Position = transform.position;
         data.levelUnlocked = GameManager.playerSaveData.levelUnlocked;
+        data.worldUnlocked = GameManager.playerSaveData.worldUnlocked;
     }
 
     public void Load(PlayerSaveData data)
     {
         transform.position = data.Position;
         GameManager.playerSaveData.levelUnlocked = data.levelUnlocked;
+        GameManager.playerSaveData.worldUnlocked = data.worldUnlocked;
     }
 }
 
@@ -166,4 +173,5 @@ public struct PlayerSaveData
 {
     public Vector3 Position;
     public int levelUnlocked;
+    public int worldUnlocked;
 }

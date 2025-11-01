@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -31,8 +32,8 @@ public class GameManager : MonoBehaviour
     public static PlayerSaveData playerSaveData;
 
     private GameObject canvasInstance;
-
     private GameObject menus;
+
     public static List<bool> discoveredWords = Enumerable.Repeat<bool>(false, 15).ToList();
 
     private void Awake()
@@ -42,11 +43,47 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
 
-            SpawnCanvas();
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            HandleCanvas(SceneManager.GetActiveScene().name);
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        HandleCanvas(scene.name);
+    }
+
+    private void HandleCanvas(string sceneName)
+    {
+        bool isLevelScene = sceneName.StartsWith("Level");
+
+        if (isLevelScene)
+        {
+            if (canvasInstance == null)
+            {
+                SpawnCanvas();
+            }
+
+            var hud = canvasInstance.GetComponentInChildren<UpdateHUD>(true);
+            if (hud != null)
+            {
+                hud.UpdateLevelDisplay();
+            }
+
+            canvasInstance.SetActive(true);
+        }
+        else if (canvasInstance != null)
+        {
+            canvasInstance.SetActive(false);
         }
     }
 
@@ -55,11 +92,15 @@ public class GameManager : MonoBehaviour
         if (Keyboard.current.numpad1Key.wasPressedThisFrame)
         {
             SaveSystem.Save();
+
+            Debug.Log(SaveSystem.SaveFileName() + " saved.");
         }
 
         if (Keyboard.current.numpad2Key.wasPressedThisFrame)
         {
             SaveSystem.Load();
+
+            Debug.Log(SaveSystem.SaveFileName() + " loaded.");
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -86,12 +127,34 @@ public class GameManager : MonoBehaviour
         menus = canvasInstance.transform.Find("Menus")?.gameObject;
     }
 
+    public int CurrentWorld
+    {
+        get
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            if (sceneName.StartsWith("Level"))
+            {
+                int.TryParse(sceneName.Replace("Level", ""), out int levelNum);
+                return (levelNum - 1) / 10 + 1;
+            }
+            return playerSaveData.worldUnlocked > 0 ? playerSaveData.worldUnlocked : 1;
+        }
+    }
+
     public static void UnlockLevel(int currentLevel)
     {
-        if(playerSaveData.levelUnlocked < currentLevel)
+        int currentWorld = (currentLevel - 1) / 10 + 1;
+
+        if (playerSaveData.levelUnlocked < currentLevel)
         {
             playerSaveData.levelUnlocked = currentLevel;
-            SaveSystem.Save();
         }
+
+        if (playerSaveData.worldUnlocked < currentWorld)
+        {
+            playerSaveData.worldUnlocked = currentWorld;
+        }
+
+        SaveSystem.Save();
     }
 }
