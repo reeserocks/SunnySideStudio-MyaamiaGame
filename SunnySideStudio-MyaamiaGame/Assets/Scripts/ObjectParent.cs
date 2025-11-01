@@ -12,12 +12,22 @@ public class ObjectParent : MonoBehaviour
     protected float moveVertical;
     protected bool isColliding = false;
     protected int collisionCount = 0;
+    protected SpriteRenderer spriteRen;
 
     protected void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         thisCollision = GetComponent<BoxCollider2D>();
         thisCollision.isTrigger = true;
+        if (this.TryGetComponent<SpriteRenderer>(out SpriteRenderer tempRen))
+        {
+            spriteRen = tempRen;
+        }
+        else
+        {
+            spriteRen = this.GetComponentInChildren<SpriteRenderer>();
+        }
+        spriteRen.color = new Color(spriteRen.color.r, spriteRen.color.g, spriteRen.color.b, .5f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,10 +67,13 @@ public class ObjectParent : MonoBehaviour
                 rb.gravityScale = 1;
                 thisCollision.isTrigger = false;
                 this.enabled = false;
+                spriteRen.color = new Color(1, 1, 1, 1f);
             }
             else
             {
-                //play sound to indicate failure to spawn
+                AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("failure_summon"), Camera.main.transform.position);
+                spriteRen.color = new Color(1, 0 , 0, .5f);
+                StartCoroutine(ColorFlash());
             }
         }
     }
@@ -73,5 +86,11 @@ public class ObjectParent : MonoBehaviour
         if (moveVertical == 0) {cappedYVelocity = 0; }
 
         rb.linearVelocity = new Vector2(cappedXVelocity, cappedYVelocity);
+    }
+
+    protected IEnumerator ColorFlash()
+    {
+        yield return new WaitForSecondsRealtime(.5f);
+        spriteRen.color = new Color(1, 1, 1, 0.5f);
     }
 }

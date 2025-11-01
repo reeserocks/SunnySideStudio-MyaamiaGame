@@ -23,25 +23,30 @@ public class Player : MonoBehaviour
     private bool isGrounded;
     private bool isJumping;
     private bool jumpHeld;
+    public bool canMove;
 
     private void Start()
     {
         GameManager.Instance.Player = this;
+        canMove = true;
     }
 
 
     void Update()
     {
-        // get move input
-        moveHorizontal = Input.GetAxisRaw("Horizontal");
-        moveVertical = Input.GetAxisRaw("Vertical");
-
-        // jump
-        if (moveVertical > 0 && isGrounded)
+        if (canMove)
         {
-            isJumping = true;
-            jumpHeld = true;
-            holdTimeCounter = maxHoldTime;
+            // get move input
+            moveHorizontal = Input.GetAxisRaw("Horizontal");
+            moveVertical = Input.GetAxisRaw("Vertical");
+
+            // jump
+            if (moveVertical > 0 && isGrounded)
+            {
+                isJumping = true;
+                jumpHeld = true;
+                holdTimeCounter = maxHoldTime;
+            }
         }
         // keep jumping
         if (moveVertical < 0)

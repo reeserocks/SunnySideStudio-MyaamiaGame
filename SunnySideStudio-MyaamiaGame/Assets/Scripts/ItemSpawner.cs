@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -15,6 +16,13 @@ public class ItemSpawner : MonoBehaviour
     public List<GameObject> englishValidObjects = new List<GameObject>();
     public List<string> myaamiaValidObjects = new List<string>();
 
+
+    private Stack<GameObject> objectsStack = new Stack<GameObject>();
+    private int itemCount = 0;
+
+    [SerializeField] AudioClip audioClipSuccess;
+    [SerializeField] AudioClip audioClipFail;
+
     private void Start()
     {
         wordBank = GameObject.Find("WordBank");
@@ -29,22 +37,35 @@ public class ItemSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)) { 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
             Debug.Log("Submitting word: " + currentText);
-            int objectPos = containsObject(currentText);
-            if (objectPos >= 0)
+            if (itemCount < 5)
             {
-                bankCanvas.alpha = 0f;
-                Vector3 offset = new Vector3(3.5f, 3f, 0);
-                Debug.Log("Creating object: " + englishValidObjects[objectPos].name);
-                Instantiate(englishValidObjects[objectPos], new Vector3(0,0, -0.1f), Quaternion.identity);
-                //Play loud correct buzzer sound
-            } else
-            {
-                //Play loud incorrect buzzer sound
+                int objectPos = containsObject(currentText);
+                if (objectPos >= 0)
+                {
+                    itemCount++;
+                    bankCanvas.alpha = 0f;
+                    Vector3 offset = new Vector3(2f, 1f, 0);
+                    Debug.Log("Creating object: " + englishValidObjects[objectPos].name);
+                    AudioSource.PlayClipAtPoint(audioClipSuccess, Camera.main.transform.position);
+                    GameObject objectSpawned = Instantiate(englishValidObjects[objectPos], player.transform.position + offset, Quaternion.identity);
+                    objectsStack.Push(objectSpawned);
+                }
+                else
+                {
+                    AudioSource.PlayClipAtPoint(audioClipFail, Camera.main.transform.position);
+                }
+                currentText = string.Empty;
+                textBar.text = string.Empty;
             }
-            currentText = string.Empty;
-            textBar.text = string.Empty;
+            else
+            {
+                Debug.Log("Too many items spawned. Will be added to UI later");
+                currentText = string.Empty;
+                textBar.text = string.Empty;
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Backspace))
         {
@@ -63,9 +84,15 @@ public class ItemSpawner : MonoBehaviour
                 bankCanvas.alpha = 0f;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Q)) {
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
             currentText += "\u0161";
             textBar.text = currentText;
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            Destroy(objectsStack.Pop());
+            itemCount--;
         }
         else if (Input.inputString != "")
         {
@@ -88,13 +115,7 @@ public class ItemSpawner : MonoBehaviour
         return -1;
     }
 
+
     // SAVE DATA
     public static List<GameObject> spawnedObjects = new List<GameObject>();
-
-    void SpawnObject(int index)
-    {
-        Vector3 offset = new Vector3(3.5f, 3f, 0);
-        GameObject obj = Instantiate(englishValidObjects[index], player.transform.position + offset, Quaternion.identity);
-        spawnedObjects.Add(obj);
-    }
 }

@@ -47,9 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03eb94f8b08d6fb458576de6944ee1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectParent
-  rb: {fileID: 0}
-  thisCollision: {fileID: 0}
-  isColliding: 0
 --- !u!50 &3845733176094498761
 Rigidbody2D:
   serializedVersion: 5
@@ -114,10 +111,10 @@ BoxCollider2D:
   m_Offset: {x: 0.0000009536743, y: 0.00000074505806}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 23.52, y: 2.8136718}
+    newSize: {x: 23.52, y: 2.8136718}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
