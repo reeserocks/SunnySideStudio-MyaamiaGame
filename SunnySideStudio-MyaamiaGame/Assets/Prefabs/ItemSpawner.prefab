@@ -52,11 +52,16 @@ MonoBehaviour:
   - {fileID: 1582130717941218663, guid: a9744c7f892653d4f908d58178d1f12d, type: 3}
   - {fileID: 3042556146871644477, guid: c45554e4d1c927a4a92449f5d76da17a, type: 3}
   - {fileID: 2576570074179193748, guid: 3b780699259dd7244a057972ce3397c9, type: 3}
+  - {fileID: 6066764792025320647, guid: dd1343f506274514a9c84d661e7e342a, type: 3}
+  - {fileID: 4304272080189626353, guid: 55bc3edacea752047bb0b65585e8e455, type: 3}
   - {fileID: 7359991139329742585, guid: 45bfad25600d7e1489920dbf6842267b, type: 3}
   myaamiaValidObjects:
   - awikaakani
   - eesaakan
   - wiintaakani
+  - akootaakani
+  - mihkintaakani
   - waapantenaakan
+  canType: 0
   audioClipSuccess: {fileID: 8300000, guid: 050b123b1b9d9f345875f4264f6a405b, type: 3}
   audioClipFail: {fileID: 8300000, guid: 28a4a418e5ec84142b57d858a79107bf, type: 3}

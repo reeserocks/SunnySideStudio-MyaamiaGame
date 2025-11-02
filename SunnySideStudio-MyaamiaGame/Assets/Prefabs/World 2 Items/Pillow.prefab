@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4011819132820681962}
   - component: {fileID: -4856982627095917968}
   - component: {fileID: 1699629510128637729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pillow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 4304272080189626353}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9139, y: -4.2549, z: 0}
-  m_LocalScale: {x: 2.7182384, y: 0.37936983, z: 1}
+  m_LocalPosition: {x: 2.407, y: -4.1563, z: 0}
+  m_LocalScale: {x: 3.7044153, y: 0.5766042, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

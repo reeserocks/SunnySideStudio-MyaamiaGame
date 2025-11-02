@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3345694023612683946, guid: 4475f18071e94ba42b284200bf930365, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3046526000823074643, guid: 27699d41e19bb3141980627698c81f66, type: 3}
     - target: {fileID: 4476287590447833386, guid: 4475f18071e94ba42b284200bf930365, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -610,23 +614,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6337429450142793722, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_Size.x
-      value: 6.7520294
+      value: 6.1969624
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337429450142793722, guid: 27699d41e19bb3141980627698c81f66, type: 3}
+      propertyPath: m_Size.y
+      value: 8.045252
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337429450142793722, guid: 27699d41e19bb3141980627698c81f66, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6337429450142793722, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_Offset.x
-      value: -0.013949871
+      value: -0.2914834
       objectReference: {fileID: 0}
     - target: {fileID: 6337429450142793722, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_Offset.y
-      value: 0.11610699
+      value: 0.030713081
       objectReference: {fileID: 0}
     - target: {fileID: 7035914584860546856, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_Size.x
-      value: 6.7598753
+      value: 5.7834454
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035914584860546856, guid: 27699d41e19bb3141980627698c81f66, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3988104
       objectReference: {fileID: 0}
     - target: {fileID: 7035914584860546856, guid: 27699d41e19bb3141980627698c81f66, type: 3}
       propertyPath: m_Offset.x
-      value: 0.0012286901
+      value: -0.48698616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7035914584860546856, guid: 27699d41e19bb3141980627698c81f66, type: 3}
+      propertyPath: m_Offset.y
+      value: -3.896294
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
