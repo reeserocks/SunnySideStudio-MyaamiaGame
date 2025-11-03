@@ -90,14 +90,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SaveSystem.Save();
 
             Debug.Log(SaveSystem.SaveFileName() + " saved.");
         }
 
-        if (Keyboard.current.numpad2Key.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             SaveSystem.Load();
 
@@ -109,6 +109,10 @@ public class GameManager : MonoBehaviour
             menus.SetActive(!menus.activeSelf);
             Cursor.visible = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3)) 
+        { Player.SetBook(true); }
+        if (Input.GetKeyDown(KeyCode.Alpha4)) { Player.SetBook(false); }
     }
 
     private void SpawnCanvas()

@@ -232,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320662697}
   - component: {fileID: 320662698}
+  - component: {fileID: 320662699}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -288,6 +289,25 @@ MonoBehaviour:
   m_Spacing: {x: 30, y: 30}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &320662699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320662696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12ff0529798e314d90f2b338cf44f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WorldSelect
+  buttons:
+  - {fileID: 8645414665834823484}
+  - {fileID: 1210212708}
+  - {fileID: 1940625878}
+  - {fileID: 1694157540}
+  - {fileID: 1869898544}
+  - {fileID: 1711347363}
 --- !u!1001 &362476870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -801,7 +821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176892673101495562, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
       propertyPath: m_Name
-      value: World1_LevelSelect (5)
+      value: LivingRoom_WorldSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -813,6 +833,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2449931481100428304, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
   m_PrefabInstance: {fileID: 1210212706}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1210212708 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1001447591084494173, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
+  m_PrefabInstance: {fileID: 1210212706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1694157538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -913,7 +944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176892673101495562, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
       propertyPath: m_Name
-      value: World1_LevelSelect (2)
+      value: Kitchen_WorldSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -925,6 +956,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2449931481100428304, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
   m_PrefabInstance: {fileID: 1694157538}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1694157540 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1001447591084494173, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
+  m_PrefabInstance: {fileID: 1694157538}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1711347361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1023,7 +1065,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176892673101495562, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
       propertyPath: m_Name
-      value: World1_LevelSelect (4)
+      value: Garden_WorldSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1035,6 +1077,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2449931481100428304, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
   m_PrefabInstance: {fileID: 1711347361}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1711347363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1001447591084494173, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
+  m_PrefabInstance: {fileID: 1711347361}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1869898542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1133,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176892673101495562, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
       propertyPath: m_Name
-      value: World1_LevelSelect (3)
+      value: Bathroom_WorldSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1145,6 +1198,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2449931481100428304, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
   m_PrefabInstance: {fileID: 1869898542}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1869898544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1001447591084494173, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
+  m_PrefabInstance: {fileID: 1869898542}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &1940625876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1245,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176892673101495562, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
       propertyPath: m_Name
-      value: World1_LevelSelect (1)
+      value: Bedroom_WorldSelect
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1257,6 +1321,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2449931481100428304, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
   m_PrefabInstance: {fileID: 1940625876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1940625878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1001447591084494173, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
+  m_PrefabInstance: {fileID: 1940625876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &8645414665834823483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1359,7 +1434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7176892673101495562, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
       propertyPath: m_Name
-      value: World1_LevelSelect
+      value: Tutorial_WorldSelect
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 561869105019669487, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
@@ -1367,6 +1442,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
+--- !u!114 &8645414665834823484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1001447591084494173, guid: 843ebc790b7ae8d4b8ae4c4c1b42bfe1, type: 3}
+  m_PrefabInstance: {fileID: 8645414665834823483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

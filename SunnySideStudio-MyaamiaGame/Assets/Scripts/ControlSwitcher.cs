@@ -46,6 +46,7 @@ public class ControlSwitcher : MonoBehaviour
     {
         if (playerActive)
         {
+            player.SetBook(true);
             player.canMove = false;
             itemSpawner.canType = true;
             gameCanvas.SetActive(true);
@@ -54,6 +55,7 @@ public class ControlSwitcher : MonoBehaviour
         }
         else
         {
+            player.SetBook(false);
             player.canMove = true;
             itemSpawner.canType = false;
             gameCanvas.SetActive(false);

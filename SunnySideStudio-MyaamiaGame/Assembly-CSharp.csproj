@@ -61,12 +61,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.4f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Scene Handling\WorldSelect.cs" />
+    <Compile Include="Assets\Scripts\World 2 Items\Pillow.cs" />
     <Compile Include="Assets\Scripts\ControlSwitcher.cs" />
     <Compile Include="Assets\Scripts\WordData.cs" />
     <Compile Include="Assets\Scripts\Spikes.cs" />
     <Compile Include="Assets\Scripts\Scene Handling\ClickSound.cs" />
     <Compile Include="Assets\Scripts\Scene Handling\MenuSelect.cs" />
-    <Compile Include="Assets\Scripts\World 1 Items\Pillow.cs" />
+    <Compile Include="Assets\Scripts\World 2 Items\Hanger.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\UpdateHUD.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -79,7 +81,6 @@
     <Compile Include="Assets\Scripts\ItemSpawner.cs" />
     <Compile Include="Assets\Scripts\Scene Handling\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\World 1 Items\Hanger.cs" />
     <Compile Include="Assets\Scripts\LevelFlag.cs" />
   </ItemGroup>
   <ItemGroup>

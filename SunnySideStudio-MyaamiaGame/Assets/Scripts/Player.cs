@@ -63,6 +63,11 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (animator.GetBool("hasBook"))
+        {
+            return;
+        }
+        
         // don't override win anim
         if (animator.GetBool("isWin"))
         {
@@ -157,6 +162,12 @@ public class Player : MonoBehaviour
     public void SetWin(bool win)
     {
         animator.SetBool("isWin", win);
+    }
+
+    //book 
+    public void SetBook(bool book)
+    {
+        animator.SetBool("hasBook", book);
     }
 
     // SAVE AND LOAD
