@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Hanger : ObjectParent
 {
-    [SerializeField] float swingTorque = 50f;
-    [SerializeField] float maxRotation = 60f;
-    [SerializeField] float jumpForce = 12f;
-    [SerializeField] float swingBoostMultiplier = 0.1f;
-    [SerializeField] float maxSwingSpeed = 300f;
+    float swingTorque = 30f;
+    float maxRotation = 60f;
+    float jumpForce = 12f;
+    float swingBoostMultiplier = 0.1f;
+    float maxSwingSpeed = 300f;
 
     Rigidbody2D playerRb;
     HingeJoint2D joint;
@@ -15,11 +15,13 @@ public class Hanger : ObjectParent
     bool canBePlaced = false;
     Transform placementZoneTransform = null;
 
+    Vector2 fixedPos;
+
     new void Update()
     {
         if (thisCollision.isTrigger)
         {
-            // Only handle arrow movement for placement
+            // handle arrow movement for placement
             moveHorizontal = Input.GetAxisRaw("Horizontal");
             moveVertical = Input.GetAxisRaw("Vertical");
             rb.AddForce(new Vector2(moveHorizontal * speed, 0), ForceMode2D.Impulse);
@@ -33,16 +35,16 @@ public class Hanger : ObjectParent
             return;
         }
 
-        // After placement - swinging logic
+        // after placement - swinging logic
         if (isPlayerAttached && playerRb)
         {
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
 
-            // Add torque to swing hanger
+            // add torque
             rb.AddTorque(-horizontal * swingTorque * Time.deltaTime, ForceMode2D.Force);
 
-            // Clamp rotation for safety
+            // clamp rotation
             rb.rotation = Mathf.Clamp(rb.rotation, -maxRotation, maxRotation);
 
             if (vertical != 0)
@@ -50,13 +52,13 @@ public class Hanger : ObjectParent
         }
         else
         {
-            // Smoothly settle hanger back to rest
+            // settle hanger back to rest
             rb.angularVelocity *= 0.95f;
             rb.rotation = Mathf.Lerp(rb.rotation, 0f, Time.deltaTime * 1.5f);
         }
     }
 
-    // Called when player confirms placement
+    // confirmed placement
     public void OnPlaced()
     {
         if (!canBePlaced || placementZoneTransform == null)
@@ -67,12 +69,12 @@ public class Hanger : ObjectParent
             return;
         }
 
-        // Lock position but allow rotation
-        thisCollision.isTrigger = false;
-        rb.bodyType = RigidbodyType2D.Kinematic;
         rb.gravityScale = 0;
         rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
-        // rotation is unlocked for swinging
+        rb.angularDamping = 1.5f;
+        thisCollision.isTrigger = false;
+
+        fixedPos = rb.position;
 
         spriteRen.color = new Color(1, 1, 1, 1);
         placementZoneTransform = null;
@@ -80,12 +82,10 @@ public class Hanger : ObjectParent
         GameManager.isPlacing = false;
     }
 
-    // Detect valid placement zones
     void OnTriggerEnter2D(Collider2D c)
     {
         if (c.CompareTag("HangerPlacement"))
         {
-            Debug.Log("Hanger can be placed here.");
             canBePlaced = true;
             placementZoneTransform = c.transform;
         }
@@ -116,7 +116,7 @@ public class Hanger : ObjectParent
         joint = playerRb.gameObject.AddComponent<HingeJoint2D>();
         joint.connectedBody = rb;
         joint.autoConfigureConnectedAnchor = false;
-        joint.connectedAnchor = Vector2.zero;
+        joint.connectedAnchor = new Vector2(0, -7f);
 
         playerRb.GetComponent<Player>()?.SetHanging(true);
         isPlayerAttached = true;
@@ -139,5 +139,11 @@ public class Hanger : ObjectParent
         isPlayerAttached = false;
         playerRb = null;
         joint = null;
+    }
+
+    void FixedUpdate()
+    {
+        if (!thisCollision.isTrigger)
+            rb.position = fixedPos;
     }
 }
