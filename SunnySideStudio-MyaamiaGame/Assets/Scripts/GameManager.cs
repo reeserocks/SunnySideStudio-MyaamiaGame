@@ -109,10 +109,6 @@ public class GameManager : MonoBehaviour
             menus.SetActive(!menus.activeSelf);
             Cursor.visible = true;
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3)) 
-        { Player.SetBook(true); }
-        if (Input.GetKeyDown(KeyCode.Alpha4)) { Player.SetBook(false); }
     }
 
     private void SpawnCanvas()

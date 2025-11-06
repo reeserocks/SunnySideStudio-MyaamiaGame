@@ -8,6 +8,7 @@ TagManager:
   - MainCanvas
   - LevelUI
   - HangerPlacement
+  - Water
   layers:
   - Default
   - TransparentFX
