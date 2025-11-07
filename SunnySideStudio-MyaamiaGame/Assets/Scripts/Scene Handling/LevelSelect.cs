@@ -34,7 +34,6 @@ public class LevelSelect : MonoBehaviour
     void LoadLevel(int level)
     {
         SceneManager.LoadScene("Level" + level);
-        
         Cursor.visible = false;
     }
 }
