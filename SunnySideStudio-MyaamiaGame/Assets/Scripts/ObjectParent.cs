@@ -67,6 +67,8 @@ public class ObjectParent : MonoBehaviour
                 rb.gravityScale = 1;
                 thisCollision.isTrigger = false;
                 GameManager.isPlacing = false;
+                GameManager.canType = true;
+                //play successsful spawn sound
                 this.enabled = false;
                 spriteRen.color = new Color(1, 1, 1, 1f);
             }

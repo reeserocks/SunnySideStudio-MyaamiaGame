@@ -26,7 +26,7 @@ public class ControlSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && GameManager.isPlacing == false)
+        if (Input.GetKeyDown(KeyCode.Space) && GameManager.isPlacing == false && player.isGrounded)
         {
             SwitchController();
         }
@@ -48,7 +48,7 @@ public class ControlSwitcher : MonoBehaviour
         {
             player.SetBook(true);
             player.canMove = false;
-            itemSpawner.canType = true;
+            GameManager.canType = true;
             gameCanvas.SetActive(true);
             AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("page_turn"), Camera.main.transform.position);
             Debug.Log("Switching to typing mode");
@@ -57,7 +57,7 @@ public class ControlSwitcher : MonoBehaviour
         {
             player.SetBook(false);
             player.canMove = true;
-            itemSpawner.canType = false;
+            GameManager.canType = false;
             gameCanvas.SetActive(false);
             AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("page_turn"), Camera.main.transform.position);
             Debug.Log("Switching to player mode");

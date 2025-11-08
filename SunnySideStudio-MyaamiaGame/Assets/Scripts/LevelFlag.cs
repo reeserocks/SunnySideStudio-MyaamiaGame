@@ -29,7 +29,8 @@ public class LevelFlag : MonoBehaviour
             levelCompleteText = textTransform.GetComponent<TextMeshProUGUI>();
 
             SaveSystem.Save();
-            GameManager.UnlockLevel(currentLevel);
+            currentLevel = SceneManager.GetActiveScene().buildIndex;
+            GameManager.UnlockLevel(currentLevel + 1);
 
             StartCoroutine(HandleWinSequence(player));
         }

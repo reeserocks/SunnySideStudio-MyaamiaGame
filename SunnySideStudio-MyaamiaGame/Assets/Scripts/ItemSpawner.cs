@@ -16,7 +16,6 @@ public class ItemSpawner : MonoBehaviour
     public List<GameObject> englishValidObjects = new List<GameObject>();
     public List<string> myaamiaValidObjects = new List<string>();
 
-    public bool canType = false;
     private Stack<GameObject> objectsStack = new Stack<GameObject>();
     private int itemCount = 0;
 
@@ -35,9 +34,9 @@ public class ItemSpawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        if (canType)
+        if (GameManager.canType)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -55,9 +54,11 @@ public class ItemSpawner : MonoBehaviour
                         GameObject objectSpawned = Instantiate(englishValidObjects[objectPos], player.transform.position + offset, Quaternion.identity);
                         objectsStack.Push(objectSpawned);
                         GameManager.isPlacing = true;
+                        GameManager.canType = false;
                     }
-                    else
+                    else if (!GameManager.isPlacing)
                     {
+                        
                         AudioSource.PlayClipAtPoint(audioClipFail, Camera.main.transform.position);
                     }
                     currentText = string.Empty;
@@ -107,10 +108,6 @@ public class ItemSpawner : MonoBehaviour
                 currentText += Input.inputString;
                 textBar.text = currentText;
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.Return) && GameManager.isPlacing == false)
-        {
-            canType = true;
         }
     }
 

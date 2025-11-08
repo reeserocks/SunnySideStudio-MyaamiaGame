@@ -106,7 +106,7 @@ public class WordReviewScreen : MonoBehaviour
             yield return null;
         }
 
-        int nextLevelIndex = PlayerPrefs.GetInt("NextLevelToLoad", 0);
+        int nextLevelIndex = GameManager.playerSaveData.levelUnlocked;
         SceneManager.LoadScene(nextLevelIndex);
     }
 

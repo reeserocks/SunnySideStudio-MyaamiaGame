@@ -19,7 +19,7 @@ public class WordBankManager : MonoBehaviour
             childButtons.Add(button.gameObject);
         }
 
-        for (int i = 0; i < childButtons.Count; i++)
+        for (int i = 1; i < childButtons.Count; i++)
         {
             childButtons[i].SetActive(GameManager.discoveredWords[i]);
         }
