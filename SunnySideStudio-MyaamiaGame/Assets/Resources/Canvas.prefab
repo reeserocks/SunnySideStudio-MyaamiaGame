@@ -1837,7 +1837,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.00012207031, z: 0, w: -14.810852}
+  m_margin: {x: 0, y: 0.00012207031, z: -113.25055, w: -14.810852}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2521,6 +2521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4717771248617641978}
+  - component: {fileID: 2619088903068386146}
   m_Layer: 5
   m_Name: Menus
   m_TagString: Untagged
@@ -2552,6 +2553,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!210 &2619088903068386146
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3687698372506062771}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 9999
+  m_SortAtRoot: 0
 --- !u!1 &3756591603769501193
 GameObject:
   m_ObjectHideFlags: 0
@@ -3702,8 +3715,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1056279969527625543}
-  - {fileID: 1019055599651025890}
   - {fileID: 4717771248617641978}
+  - {fileID: 1019055599651025890}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5691,6 +5704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1019055599651025890}
   - component: {fileID: 4197716599995387477}
+  - component: {fileID: 5399984099569015788}
   m_Layer: 0
   m_Name: HUD
   m_TagString: LevelUI
@@ -5739,6 +5753,18 @@ MonoBehaviour:
   - {fileID: -6762806206646994688, guid: a5ef02f8f135eaf46ae82a9954178b33, type: 3}
   - {fileID: -3521427111303423466, guid: 11c37f6bf679abb47ae9dceb65554d59, type: 3}
   - {fileID: 5435936245034971430, guid: 20d442dec688fbd4eb5c59f4eabe37a4, type: 3}
+--- !u!210 &5399984099569015788
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8974892754991039825}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &9063535856945123657
 GameObject:
   m_ObjectHideFlags: 0
