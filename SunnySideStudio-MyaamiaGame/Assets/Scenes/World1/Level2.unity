@@ -1189,7 +1189,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 5504714808217485012, guid: b74ffc02ec2a9e840bc9ec4ca73aea69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1460,7 +1460,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1594710550}
   - {fileID: 188704841}
   - {fileID: 1490303448}
   - {fileID: 550795551}
@@ -1480,3 +1479,4 @@ SceneRoots:
   - {fileID: 1048649015}
   - {fileID: 505153258}
   - {fileID: 1915445863}
+  - {fileID: 1594710550}

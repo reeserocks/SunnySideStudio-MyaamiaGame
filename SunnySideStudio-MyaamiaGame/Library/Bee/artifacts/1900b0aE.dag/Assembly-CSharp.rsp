@@ -475,6 +475,7 @@
 "Assets/Scripts/World 2 Items/Hanger.cs"
 "Assets/Scripts/World 2 Items/Pillow.cs"
 "Assets/Scripts/World 3 Items/Fork.cs"
+"Assets/Scripts/World 3 Items/Spoon.cs"
 -langversion:9.0
 /deterministic
 /optimize+

@@ -11,11 +11,14 @@ public class LevelSelect : MonoBehaviour
     void Start()
     {
         int unlockedLevel = GameManager.playerSaveData.levelUnlocked;
+        int currentWorld = GameManager.playerSaveData.worldUnlocked;
 
+        //delete once we have tutorial level
         if (unlockedLevel < 1)
-        { 
-            unlockedLevel = 1; 
-        }
+            unlockedLevel = 1;
+
+        int startLevel = (currentWorld - 1) * 10 + 1;
+        int endLevel = startLevel + 9;
 
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -24,16 +27,16 @@ public class LevelSelect : MonoBehaviour
 
             buttons[i].interactable = isUnlocked;
 
-            int levelToLoad = levelIndex;
-
             buttons[i].onClick.RemoveAllListeners();
-            buttons[i].onClick.AddListener(() => LoadLevel(levelToLoad));
+            buttons[i].onClick.AddListener(() => LoadLevel(levelIndex));
         }
     }
 
     void LoadLevel(int level)
     {
-        SceneManager.LoadScene("Level" + level);
+        string sceneName = "Level" + level;
+
+        SceneManager.LoadScene(sceneName);
         Cursor.visible = false;
     }
 }

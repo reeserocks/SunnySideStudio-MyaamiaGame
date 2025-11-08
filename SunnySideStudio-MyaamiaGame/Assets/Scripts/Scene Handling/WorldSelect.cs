@@ -31,15 +31,16 @@ public class WorldSelect : MonoBehaviour
 
     private void LoadWorld(int world)
     {
-        string sceneName = $"World" + world.ToString() +"LevelSelect";
-
-        if (Application.CanStreamedLevelBeLoaded(sceneName))
+        if (world != 1)
         {
+            string sceneName = $"World" + world.ToString() + "LevelSelect";
+
             SceneManager.LoadScene(sceneName);
         }
         else
         {
-            Debug.LogWarning($"Scene '{sceneName}' not found. Check your build settings.");
+            //change to Level0 after we have tutorial
+            SceneManager.LoadScene("World1LevelSelect");
         }
     }
 }

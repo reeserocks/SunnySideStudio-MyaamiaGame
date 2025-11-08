@@ -1,0 +1,405 @@
+fileFormatVersion: 2
+guid: 0c0e37cdae81f5f4484e5038a2bfbcc4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -321822030672880092
+    second: SpoonAnim_0
+  - first:
+      213: 3569545831944957247
+    second: SpoonAnim_1
+  - first:
+      213: 3479787209123384984
+    second: SpoonAnim_2
+  - first:
+      213: 4744053795167042901
+    second: SpoonAnim_3
+  - first:
+      213: -2831900712312719194
+    second: SpoonAnim_4
+  - first:
+      213: 8679101790207344211
+    second: SpoonAnim_5
+  - first:
+      213: -6512078170640002081
+    second: SpoonAnim_6
+  - first:
+      213: 5455075833668332755
+    second: SpoonAnim_7
+  - first:
+      213: 166013812909055204
+    second: SpoonAnim_8
+  - first:
+      213: -5183302215789246469
+    second: SpoonAnim_9
+  - first:
+      213: -698728441187169572
+    second: SpoonAnim_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpoonAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1864
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e19d47198a88bf0800000000000000
+      internalID: -321822030672880092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_1
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1864
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d2e8a9503998130800000000000000
+      internalID: 3569545831944957247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_2
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 1864
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e4fbda700ba4030800000000000000
+      internalID: 3479787209123384984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_3
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1864
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d7648aac346d140800000000000000
+      internalID: 4744053795167042901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 932
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8bc636e4113b8d0800000000000000
+      internalID: -2831900712312719194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_5
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 932
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ef3c6281d527870800000000000000
+      internalID: 8679101790207344211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_6
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 932
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd35d61086370a5a0800000000000000
+      internalID: -6512078170640002081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_7
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 932
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc6e98819254bb40800000000000000
+      internalID: 5455075833668332755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec904aeeaccd4200800000000000000
+      internalID: 166013812909055204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_9
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 0
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf70368d8163118b0800000000000000
+      internalID: -5183302215789246469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpoonAnim_10
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 0
+        width: 999
+        height: 932
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda839c4f2e9d46f0800000000000000
+      internalID: -698728441187169572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b6743ea398fe0d74f82abd29dc94a05b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":999.0,"y":932.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      SpoonAnim_0: -321822030672880092
+      SpoonAnim_1: 3569545831944957247
+      SpoonAnim_10: -698728441187169572
+      SpoonAnim_2: 3479787209123384984
+      SpoonAnim_3: 4744053795167042901
+      SpoonAnim_4: -2831900712312719194
+      SpoonAnim_5: 8679101790207344211
+      SpoonAnim_6: -6512078170640002081
+      SpoonAnim_7: 5455075833668332755
+      SpoonAnim_8: 166013812909055204
+      SpoonAnim_9: -5183302215789246469
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

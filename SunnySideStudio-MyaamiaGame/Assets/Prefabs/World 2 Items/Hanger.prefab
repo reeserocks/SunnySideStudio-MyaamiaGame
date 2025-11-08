@@ -178,8 +178,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 309078f7a298b904ba0b99afc1e095fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Hanger
-  swingTorque: 50
-  maxRotation: 60
-  jumpForce: 12
-  swingBoostMultiplier: 0.1
-  maxSwingSpeed: 300

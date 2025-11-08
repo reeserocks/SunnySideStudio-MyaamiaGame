@@ -28,11 +28,33 @@ public class LevelFlag : MonoBehaviour
             Transform textTransform = canvas.transform.Find("LevelCompleteTxt");
             levelCompleteText = textTransform.GetComponent<TextMeshProUGUI>();
 
+            LevelProgression();
+
             SaveSystem.Save();
-            currentLevel = SceneManager.GetActiveScene().buildIndex;
-            GameManager.UnlockLevel(currentLevel + 1);
 
             StartCoroutine(HandleWinSequence(player));
+        }
+    }
+
+    void LevelProgression()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
+        int currentLevel = 0;
+
+        if (sceneName.StartsWith("Level"))
+        {
+            int.TryParse(sceneName.Substring(5), out currentLevel);
+        }
+
+        GameManager.UnlockLevel(currentLevel + 1);
+
+        if (currentLevel % 10 == 0)
+        {
+            int nextWorld = (currentLevel / 10) + 1;
+            if (nextWorld > GameManager.playerSaveData.worldUnlocked)
+            {
+                GameManager.playerSaveData.worldUnlocked = nextWorld;
+            }
         }
     }
 
