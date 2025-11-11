@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WordData
   myaamiaWord: akootaakani
   englishTranslation: Hanger
-  description: Hanging and swinging platform
+  description: Can be used as a hanging and swinging platform.
   image: {fileID: -3900582269341384456, guid: 35f03b10e94b96c49b48cfc9ee243275, type: 3}
