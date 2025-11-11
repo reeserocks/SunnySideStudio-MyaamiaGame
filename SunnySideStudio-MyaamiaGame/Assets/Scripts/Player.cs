@@ -25,6 +25,9 @@ public class Player : MonoBehaviour
     private bool jumpHeld;
     public bool canMove;
 
+    private bool pushedByFan;
+    private int fanDirection;
+
     private void Start()
     {
         GameManager.Instance.Player = this;
@@ -107,7 +110,14 @@ public class Player : MonoBehaviour
         if (isJumping && canMove)
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            rb.linearVelocityX = Math.Min(rb.linearVelocityX, 4.8f);
+            if (pushedByFan)
+            {
+                rb.linearVelocityX = 25 *fanDirection;
+            }
+            else
+            {
+                rb.linearVelocityX = Math.Min(rb.linearVelocityX, 4.8f);
+            }
             isGrounded = false;
             isJumping = false;
         }
@@ -115,7 +125,14 @@ public class Player : MonoBehaviour
         if (jumpHeld && holdTimeCounter > 0 && canMove)
         {
             rb.AddForce(Vector2.up * holdForce, ForceMode2D.Impulse);
-            rb.linearVelocityX = Math.Min(rb.linearVelocityX, 3f);
+            if (pushedByFan)
+            {
+                rb.linearVelocityX = 25 * fanDirection;
+            }
+            else
+            {
+                rb.linearVelocityX = Math.Min(rb.linearVelocityX, 3f);
+            }
             holdTimeCounter -= Time.fixedDeltaTime;
         }
         // no y velocity when grounded
@@ -151,13 +168,25 @@ public class Player : MonoBehaviour
             jumpHeld = false;
             
         }
+        else if (collision.CompareTag("Fan") && canMove)
+        {
+            pushedByFan = true;
+            if (collision.gameObject.transform.localScale.x > 0.0f) {
+                fanDirection = -1;
+            }
+            else 
+                fanDirection = 1;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Ground") && canMove)
         {
             isGrounded = false;
-            
+        }
+        else if (collision.CompareTag("Fan") && canMove)
+        {
+            pushedByFan = false;
         }
     }
 
