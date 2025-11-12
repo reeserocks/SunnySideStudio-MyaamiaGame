@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectParent : MonoBehaviour
 {
     protected Rigidbody2D rb;
-    protected BoxCollider2D thisCollision;
+    protected Collider2D thisCollision;
     private float maxVelocity = 4.0f;
     protected float speed = .1f;
     protected float moveHorizontal;
@@ -17,7 +17,7 @@ public class ObjectParent : MonoBehaviour
     protected void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        thisCollision = GetComponent<BoxCollider2D>();
+        thisCollision = GetComponent<Collider2D>();
         thisCollision.isTrigger = true;
         if (this.TryGetComponent<SpriteRenderer>(out SpriteRenderer tempRen))
         {
@@ -32,16 +32,22 @@ public class ObjectParent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        isColliding = true;
-        collisionCount++;
+        if (collision.CompareTag("Ground"))
+        {
+            isColliding = true;
+            collisionCount++;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        collisionCount--;
-        if (collisionCount == 0)
+        if (collision.CompareTag("Ground"))
         {
-            isColliding = false;
+            collisionCount--;
+            if (collisionCount == 0)
+            {
+                isColliding = false;
+            }
         }
     }
 

@@ -1284,6 +1284,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fan
       objectReference: {fileID: 0}
+    - target: {fileID: 3377849200455391636, guid: 5636a2b6403c22f4aa1a8182772e2316, type: 3}
+      propertyPath: m_Size.x
+      value: 40.39944
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377849200455391636, guid: 5636a2b6403c22f4aa1a8182772e2316, type: 3}
+      propertyPath: m_Size.y
+      value: 10.773257
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377849200455391636, guid: 5636a2b6403c22f4aa1a8182772e2316, type: 3}
+      propertyPath: m_Offset.x
+      value: -15.5510235
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377849200455391636, guid: 5636a2b6403c22f4aa1a8182772e2316, type: 3}
+      propertyPath: m_Offset.y
+      value: 4.238403
+      objectReference: {fileID: 0}
     - target: {fileID: 8941860675604919818, guid: 5636a2b6403c22f4aa1a8182772e2316, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.13
