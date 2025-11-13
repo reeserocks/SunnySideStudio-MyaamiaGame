@@ -84,10 +84,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -6512078170640002081, guid: 0c0e37cdae81f5f4484e5038a2bfbcc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 9.99, y: 9.320098}
@@ -152,17 +152,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 5.041539, y: 0.787939}
+  m_Offset: {x: 0.027385712, y: -3.8380914}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 9.99, y: 9.320098}
     newSize: {x: 9.99, y: 9.320098}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10.728561, y: 2.043276}
+  m_Size: {x: 10.263933, y: 1.9289827}
   m_EdgeRadius: 0
 --- !u!61 &4219159020128720217
 BoxCollider2D:
@@ -198,17 +198,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 8.263453, y: 1.6811633}
+  m_Offset: {x: -3.264766, y: -2.3417416}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 9.99, y: 9.320098}
     newSize: {x: 9.99, y: 9.320098}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.365036, y: 2.7624545}
+  m_Size: {x: 3.6496596, y: 0.9735527}
   m_EdgeRadius: 0
 --- !u!50 &880849605292741362
 Rigidbody2D:
@@ -244,7 +244,7 @@ HingeJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9208604986041350594}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 0}
@@ -252,8 +252,8 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 0
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.2, y: 1.87}
+  m_Anchor: {x: 4.995, y: -4.660048}
+  m_ConnectedAnchor: {x: 5.2708726, y: -4.432617}
   m_UseConnectedAnchor: 1
   m_UseMotor: 1
   m_Motor:
@@ -261,8 +261,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 25
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -100
-    m_UpperAngle: 0
+    m_LowerAngle: -89.34068
+    m_UpperAngle: -0.5406791
 --- !u!114 &4714773423337487003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,5 +276,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Spoon
   catapultTimer: 1
-  motorSpeed: 10000
-  motorForce: 10000
+  motorSpeed: 1000
+  motorForce: 10000000

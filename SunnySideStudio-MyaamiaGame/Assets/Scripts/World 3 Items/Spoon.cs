@@ -6,7 +6,7 @@ public class Spoon : ObjectParent
 {
     Animator animator;
 
-    public float catapultTimer = 1f;
+    public float catapultTimer = 0.2f;
     public float motorSpeed;
     public float motorForce;
 
@@ -49,6 +49,7 @@ public class Spoon : ObjectParent
     {
         if (c.CompareTag("Player"))
         {
+            timer = catapultTimer;
             timerStart = true;
             //animator.SetBool("isLaunching?", true);
         }
@@ -94,6 +95,7 @@ public class Spoon : ObjectParent
         if (collision.gameObject.CompareTag("Ground") && rb.gravityScale == 1)
         {
             hinge.enabled = true;
+            this.enabled = true;
         }
     }
 }
