@@ -9,9 +9,15 @@ public class ControlSwitcher : MonoBehaviour
     private static GameObject outCamera;
 
     private bool playerActive = true;
+    private bool levelStarted;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
+    {
+        SetLevelStart();
+    }
+
+    public void SetLevelStart()
     {
         player = Player.FindFirstObjectByType<Player>();
         itemSpawner = ItemSpawner.FindAnyObjectByType<ItemSpawner>();
@@ -19,13 +25,20 @@ public class ControlSwitcher : MonoBehaviour
         inCamera = GameObject.Find("InCamera");
         outCamera = GameObject.Find("OutCamera");
         gameCanvas.SetActive(false);
-        inCamera.SetActive(true);
-        outCamera.SetActive(false);
+        inCamera.SetActive(false);
+        outCamera.SetActive(true);
+        player.canMove = false;
+        levelStarted = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (levelStarted && Input.anyKeyDown) { 
+            player.canMove = true;
+            levelStarted = false;
+            SwitchCamera();
+        }
         if (Input.GetKeyDown(KeyCode.Space) && GameManager.isPlacing == false && player.isGrounded)
         {
             SwitchController();

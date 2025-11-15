@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         HandleCanvas(scene.name);
+        instance.GetComponent<ControlSwitcher>().SetLevelStart();
     }
 
     private void HandleCanvas(string sceneName)
