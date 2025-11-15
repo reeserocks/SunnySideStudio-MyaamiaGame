@@ -106,67 +106,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kitchen_0
+      name: 3-kitchen_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 31
-        width: 71
-        height: 430
+        x: 0
+        y: 0
+        width: 500
+        height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 009bffff59fa522a0800000000000000
-      internalID: -6762806206646994688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kitchen_1
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 47
-        width: 374
-        height: 367
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c1805f93479094ff0800000000000000
-      internalID: -51499525944834020
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: kitchen_2
-      rect:
-        serializedVersion: 2
-        x: 418
-        y: 31
-        width: 79
-        height: 438
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 72e8dc2059b1b0b80800000000000000
-      internalID: -8427611950882648537
+      spriteID: a49b00898049ca14785ef404d8624711
+      internalID: -74116084
       vertices: []
       indices: 
       edges: []
@@ -175,7 +131,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6a9dc87c793f05440aa40f7e3f031c18
     internalID: 0
     vertices: []
     indices: 
@@ -183,11 +139,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":500.0,"y":500.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      kitchen_0: -6762806206646994688
-      kitchen_1: -51499525944834020
-      kitchen_2: -8427611950882648537
+      3-kitchen_0: -74116084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
