@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 121
+  controlID: 117
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 9.235725, y: 3.2225504, z: -0.08742189}
+    m_Target: {x: 24.702444, y: 9.432214, z: -0.0950078}
     speed: 2
-    m_Value: {x: 9.394872, y: 3.0564337, z: -0.082775265}
+    m_Value: {x: 24.590977, y: 9.460497, z: -0.101662554}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -912,9 +912,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.790481
+    m_Target: 14.122829
     speed: 2
-    m_Value: 10.325819
+    m_Value: 14.788303
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -995,7 +995,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/World 4 Items
+    - Assets/Scenes/World2
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1005,16 +1005,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/World 4 Items
+  - Assets/Scenes/World2
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\reese\OneDrive\Documents\Unity Projects\SunnySideStudio-MyaamiaGame\SunnySideStudio-MyaamiaGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b8bb0000
-    m_LastClickedID: 48056
-    m_ExpandedIDs: 000000009aba000012bb000016bb00001ebb000000ca9a3b
+    scrollPos: {x: 0, y: 240}
+    m_SelectedIDs: 4cbb0000
+    m_LastClickedID: 47948
+    m_ExpandedIDs: 0000000090ba000008bb00000cbb000014bb000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1043,7 +1043,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009aba0000
+    m_ExpandedIDs: 0000000090ba0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1125,21 +1125,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: dcfaffff
+      m_ExpandedIDs: ce4afeffa64dfeff347bfeff32c4fefff2d8feff1cdbfeffd02bffffc62dffffcc2fffff6032ffff4453ffff687affff5c7cffff4a7effff7e80ffff8282ffffa884ffffa886ffff2289ffff468cffffaa8effffc090ffffb092ffffa894ffffdc96ffff2c9affffb29cfffff2b8ffff3ebbffff88bdffff40bfffffbec1ffffe2c4ffff42c7ffff36c9ffff5ecbffff5ecdffffdacfffffead1ffffd4d3fffffad5ffffead7ffffead9ffff34dcffffb0deffffc2e0fffff8e4ffffe2e6ffff5ee9ffff5eebffff48edffff38efffff80f1ffff82f3ffff88f5ffff04fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Platform4
+        m_OriginalName: Platform4
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -111988
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
