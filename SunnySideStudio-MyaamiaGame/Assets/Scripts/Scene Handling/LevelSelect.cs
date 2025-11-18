@@ -11,19 +11,15 @@ public class LevelSelect : MonoBehaviour
     void Start()
     {
         int unlockedLevel = GameManager.playerSaveData.levelUnlocked;
-        int currentWorld = GameManager.playerSaveData.worldUnlocked;
+        int currentWorld = GameManager.worldSelected;
 
-        //delete once we have tutorial level
-        if (unlockedLevel < 1)
-            unlockedLevel = 1;
-
-        int startLevel = (currentWorld - 1) * 10 + 1;
+        int startLevel = (currentWorld) * 10 + 1;
         int endLevel = startLevel + 9;
 
         for (int i = 0; i < buttons.Length; i++)
         {
-            int levelIndex = i + 1;
-            bool isUnlocked = levelIndex <= unlockedLevel;
+            int levelIndex = ((currentWorld - 1) * 10) + i + 1;
+            bool isUnlocked = (levelIndex <= unlockedLevel);
 
             buttons[i].interactable = isUnlocked;
 

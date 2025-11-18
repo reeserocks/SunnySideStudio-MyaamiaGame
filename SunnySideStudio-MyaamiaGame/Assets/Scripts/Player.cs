@@ -168,7 +168,7 @@ public class Player : MonoBehaviour
             jumpHeld = false;
             
         }
-        else if (collision.CompareTag("Fan") && canMove)
+        else if (collision.gameObject.CompareTag("Fan") && canMove)
         {
             pushedByFan = true;
             if (collision.gameObject.transform.localScale.x > 0.0f) {
@@ -184,7 +184,7 @@ public class Player : MonoBehaviour
         {
             isGrounded = false;
         }
-        else if (collision.CompareTag("Fan") && canMove)
+        else if (collision.gameObject.CompareTag("Fan") && canMove)
         {
             pushedByFan = false;
         }

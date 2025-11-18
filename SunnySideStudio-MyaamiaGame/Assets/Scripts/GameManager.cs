@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public static List<bool> discoveredWords = Enumerable.Repeat<bool>(false, 16).ToList();
     public static bool isPlacing = false;
     public static bool canType = false;
+    public static int worldSelected;
 
     private void Awake()
     {
@@ -140,7 +141,7 @@ public class GameManager : MonoBehaviour
                 int.TryParse(sceneName.Replace("Level", ""), out int levelNum);
                 return (levelNum - 1) / 10 + 1;
             }
-            return playerSaveData.worldUnlocked > 0 ? playerSaveData.worldUnlocked : 1;
+            return playerSaveData.worldUnlocked;
         }
     }
 
