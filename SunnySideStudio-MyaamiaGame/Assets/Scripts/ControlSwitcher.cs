@@ -43,10 +43,11 @@ public class ControlSwitcher : MonoBehaviour
         {
             SwitchController();
         }
-        //if (Input.GetKeyDown(KeyCode.Tab))
-        //{
-        //    SwitchCamera();
-        //}
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SwitchCamera();
+        }
     }
 
     void SwitchCamera()

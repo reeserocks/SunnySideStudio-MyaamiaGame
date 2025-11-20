@@ -93,21 +93,21 @@ public class ItemSpawner : MonoBehaviour
                 currentText += "\u0161";
                 textBar.text = currentText;
             }
-            else if (Input.GetKeyDown(KeyCode.R))
-            {
-                Destroy(objectsStack.Pop());
-                itemCount--;
-            }
             else if (Input.GetKeyDown(KeyCode.Space))
             {
                 currentText = "";
                 textBar.text = currentText;
             }
-            else if (Input.inputString != "")
+            else if (Input.inputString != "" && !Input.GetKeyDown(KeyCode.R))
             {
                 currentText += Input.inputString;
                 textBar.text = currentText;
             }
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Destroy(objectsStack.Pop());
+            itemCount--;
         }
     }
 

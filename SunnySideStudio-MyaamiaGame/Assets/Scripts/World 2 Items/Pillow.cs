@@ -21,6 +21,6 @@ public class Pillow : ObjectParent
     {
         yield return new WaitForSecondsRealtime(3);
         Rigidbody2D otherBody = collision.gameObject.GetComponent<Rigidbody2D>();
-        otherBody.AddForce(new Vector2(0, 25.0f), ForceMode2D.Impulse);
+        otherBody.AddForce(new Vector2(0, 75.0f), ForceMode2D.Impulse);
     }
 }
