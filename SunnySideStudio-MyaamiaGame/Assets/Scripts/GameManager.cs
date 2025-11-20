@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        /*if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SaveSystem.Save();
 
@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
 
             Debug.Log(SaveSystem.SaveFileName() + " loaded.");
         }
+        */
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

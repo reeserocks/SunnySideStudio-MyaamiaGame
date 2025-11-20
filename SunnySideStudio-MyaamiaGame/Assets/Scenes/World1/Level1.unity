@@ -584,14 +584,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: WordBank
       objectReference: {fileID: 0}
-    - target: {fileID: 4413833085412461409, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6374071070234566837, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7168462615425178201, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -671,10 +663,6 @@ PrefabInstance:
     - target: {fileID: 7168462615425178201, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8909606952000867398, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
-      propertyPath: positionChange
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
