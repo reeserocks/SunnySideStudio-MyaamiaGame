@@ -33,15 +33,18 @@ public class UpdateHUD : MonoBehaviour
         if (sceneName.StartsWith("Level"))
         {
             int.TryParse(sceneName.Replace("Level", ""), out level);
-            world = (level - 1) / 10 + 1;
-            level = (level - 1) % 10 + 1;
+            if (level == 0)
+            {
+                world = 0;
+            }
+            else
+            {
+                world = (level - 1) / 10 + 1;
+                level = (level - 1) % 10 + 1;
+            }
         }
 
-        if (worldIcons.Length >= world)
-        {
-            worldIcon.sprite = worldIcons[world - 1];
-        }
-
+        worldIcon.sprite = worldIcons[world];
         levelText.text = level.ToString();
     }
 }
