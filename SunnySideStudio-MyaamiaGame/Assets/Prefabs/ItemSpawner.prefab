@@ -58,6 +58,8 @@ MonoBehaviour:
   - {fileID: 1369003085712786405, guid: e3ecb58656898834ebbd3cb9aee30d8a, type: 3}
   - {fileID: 9208604986041350594, guid: 72c1e6d02b8779d41848d9679ada2883, type: 3}
   - {fileID: 8004158705629927133, guid: 26792b163020ba84882fc1c4a03c388b, type: 3}
+  - {fileID: 8726612626318818682, guid: 8d30d8fee4726764db1ef35bfaea7d6a, type: 3}
+  - {fileID: 7832670727995785535, guid: 0916ad39f8bc5704c89c035653c873d1, type: 3}
   myaamiaValidObjects:
   - awikaakani
   - eesaakan
@@ -68,5 +70,7 @@ MonoBehaviour:
   - neewikoleeki
   - kookaani
   - nipoopilaakani
+  - sponge
+  - soap
   audioClipSuccess: {fileID: 8300000, guid: 050b123b1b9d9f345875f4264f6a405b, type: 3}
   audioClipFail: {fileID: 8300000, guid: 28a4a418e5ec84142b57d858a79107bf, type: 3}
