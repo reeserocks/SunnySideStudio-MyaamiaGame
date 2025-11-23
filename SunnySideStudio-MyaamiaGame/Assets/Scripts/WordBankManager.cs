@@ -14,14 +14,21 @@ public class WordBankManager : MonoBehaviour
     {
         updateDiscoveredWords();
         List<GameObject> childButtons = new List<GameObject>();
-        foreach (Transform button in transform)
-        {
-            childButtons.Add(button.gameObject);
-        }
+        findAllButtons(transform, childButtons);
 
-        for (int i = 1; i < childButtons.Count; i++)
+        for (int i = 0; i < childButtons.Count; i++)
         {
             childButtons[i].SetActive(GameManager.discoveredWords[i]);
+        }
+    }
+
+    void findAllButtons(Transform parent, List<GameObject> list)
+    {
+        foreach (Transform child in parent)
+        {
+            if (child.gameObject.CompareTag("DisWord"))
+                list.Add(child.gameObject);
+            findAllButtons(child, list);
         }
     }
 

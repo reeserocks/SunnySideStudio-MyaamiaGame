@@ -36,6 +36,14 @@ public class ItemSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        foreach (GameObject item in objectsStack)
+        {
+            if (item.transform.position.y < -10)
+            {
+                Destroy(objectsStack.Pop());
+                itemCount--;
+            }
+        }
         if (GameManager.canType)
         {
             if (Input.GetKeyDown(KeyCode.Return))
@@ -96,6 +104,7 @@ public class ItemSpawner : MonoBehaviour
             else if (Input.GetKeyDown(KeyCode.Space))
             {
                 currentText = "";
+                bankCanvas.alpha = 0f;
                 textBar.text = currentText;
             }
             else if (Input.inputString != "" && !Input.GetKeyDown(KeyCode.R))
