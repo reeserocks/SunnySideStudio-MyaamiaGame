@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Scene Handling\WorldSelect.cs" />
+    <Compile Include="Assets\Scripts\LevelSwitch.cs" />
     <Compile Include="Assets\Scripts\World 2 Items\Pillow.cs" />
     <Compile Include="Assets\Scripts\ControlSwitcher.cs" />
     <Compile Include="Assets\Scripts\WordData.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\World 1 Items\Book.cs" />
     <Compile Include="Assets\Scripts\ItemSpawner.cs" />
     <Compile Include="Assets\Scripts\World 3 Items\Bowl.cs" />
+    <Compile Include="Assets\Scripts\World 4 Items\Sponge.cs" />
     <Compile Include="Assets\Scripts\Scene Handling\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\World 3 Items\Spoon.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

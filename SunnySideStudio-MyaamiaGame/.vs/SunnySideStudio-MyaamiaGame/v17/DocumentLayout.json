@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|c:\\users\\reese\\onedrive\\documents\\unity projects\\sunnysidestudio-myaamiagame\\sunnysidestudio-myaamiagame\\assets\\scripts\\levelswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\levelswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|c:\\users\\reese\\onedrive\\documents\\unity projects\\sunnysidestudio-myaamiagame\\sunnysidestudio-myaamiagame\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|c:\\users\\reese\\onedrive\\documents\\unity projects\\sunnysidestudio-myaamiagame\\sunnysidestudio-myaamiagame\\assets\\scripts\\updatehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\assets\\scripts\\updatehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\updatehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -107,6 +111,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LevelSwitch.cs",
+              "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\LevelSwitch.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LevelSwitch.cs",
+              "ToolTip": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\LevelSwitch.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LevelSwitch.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T20:01:25.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -119,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "SaveSystem.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\SaveSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SaveSystem.cs",
@@ -131,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ControlSwitcher.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\ControlSwitcher.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ControlSwitcher.cs",
@@ -143,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Pillow.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\World 2 Items\\Pillow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\World 2 Items\\Pillow.cs",
@@ -155,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ObjectParent.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\ObjectParent.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectParent.cs",
@@ -167,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ItemSpawner.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\ItemSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ItemSpawner.cs",
@@ -179,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "LevelFlag.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\LevelFlag.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelFlag.cs",
@@ -191,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
@@ -203,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MenuSelect.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Scene Handling\\MenuSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Scene Handling\\MenuSelect.cs",
@@ -215,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "WordBankManager.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\WordBankManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WordBankManager.cs",
@@ -227,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ClickSound.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Scene Handling\\ClickSound.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Scene Handling\\ClickSound.cs",
@@ -239,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UpdateHUD.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\UpdateHUD.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UpdateHUD.cs",
@@ -247,12 +264,11 @@
               "RelativeToolTip": "Assets\\Scripts\\UpdateHUD.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAIwCgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T18:37:37.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-26T18:37:37.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "WorldSelect.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Scene Handling\\WorldSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Scene Handling\\WorldSelect.cs",
@@ -264,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Hanger.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\World 2 Items\\Hanger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\World 2 Items\\Hanger.cs",
@@ -276,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LevelSelect.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Scene Handling\\LevelSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Scene Handling\\LevelSelect.cs",
@@ -288,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "WordReview.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\WordReview.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WordReview.cs",
@@ -300,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Fork.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\World 3 Items\\Fork.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\World 3 Items\\Fork.cs",
@@ -312,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\World 1 Items\\Book.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\World 1 Items\\Book.cs",
@@ -324,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Spoon.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\World 3 Items\\Spoon.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\World 3 Items\\Spoon.cs",
@@ -336,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Bowl.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\World 3 Items\\Bowl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\World 3 Items\\Bowl.cs",
@@ -348,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "WordData.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\WordData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\WordData.cs",
@@ -360,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Spikes.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Spikes.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Spikes.cs",
@@ -372,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Hanger.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\World 1 Items\\Hanger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\World 1 Items\\Hanger.cs",

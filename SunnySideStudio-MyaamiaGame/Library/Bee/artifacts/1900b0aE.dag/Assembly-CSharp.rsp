@@ -459,6 +459,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/ItemSpawner.cs"
 "Assets/Scripts/LevelFlag.cs"
+"Assets/Scripts/LevelSwitch.cs"
 "Assets/Scripts/ObjectParent.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/SaveSystem.cs"
@@ -478,6 +479,7 @@
 "Assets/Scripts/World 3 Items/Bowl.cs"
 "Assets/Scripts/World 3 Items/Fork.cs"
 "Assets/Scripts/World 3 Items/Spoon.cs"
+"Assets/Scripts/World 4 Items/Sponge.cs"
 -langversion:9.0
 /deterministic
 /optimize+
