@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private bool jumpHeld;
     public bool canMove;
 
-    private bool pushedByFan;
+    public bool pushedByFan;
     private int fanDirection;
 
     private void Start()
@@ -112,7 +112,7 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             if (pushedByFan)
             {
-                rb.linearVelocityX = 25 *fanDirection;
+                rb.linearVelocityX = 25 * fanDirection;
             }
             else
             {
@@ -170,11 +170,15 @@ public class Player : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Fan") && canMove)
         {
-            pushedByFan = true;
-            if (collision.gameObject.transform.localScale.x > 0.0f) {
+            if (collision.gameObject.transform.rotation.z == -90.0f)
+            {
+                fanDirection = 0;
+            }
+            else if (collision.gameObject.transform.localScale.x > 0.0f)
+            {
                 fanDirection = -1;
             }
-            else 
+            else
                 fanDirection = 1;
         }
     }
@@ -183,10 +187,6 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Ground") && canMove)
         {
             isGrounded = false;
-        }
-        else if (collision.gameObject.CompareTag("Fan") && canMove)
-        {
-            pushedByFan = false;
         }
     }
 
