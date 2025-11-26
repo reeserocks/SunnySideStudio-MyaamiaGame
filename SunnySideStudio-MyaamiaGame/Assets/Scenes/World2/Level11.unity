@@ -271,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 512039616307532797, guid: 401ecb96e0935104cb3639366db4212e, type: 3}
       propertyPath: orthographic size
-      value: 9.79
+      value: 12.73
       objectReference: {fileID: 0}
     - target: {fileID: 4021050243156156699, guid: 401ecb96e0935104cb3639366db4212e, type: 3}
       propertyPath: m_CameraType
@@ -279,15 +279,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6372090598016249271, guid: 401ecb96e0935104cb3639366db4212e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.69
+      value: 14.18
       objectReference: {fileID: 0}
     - target: {fileID: 6372090598016249271, guid: 401ecb96e0935104cb3639366db4212e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.22
+      value: 6.26
       objectReference: {fileID: 0}
     - target: {fileID: 6372090598016249271, guid: 401ecb96e0935104cb3639366db4212e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.26
+      value: -2.15
       objectReference: {fileID: 0}
     - target: {fileID: 6372090598016249271, guid: 401ecb96e0935104cb3639366db4212e, type: 3}
       propertyPath: m_LocalRotation.w

@@ -80,6 +80,7 @@ public class Hanger : ObjectParent
         placementZoneTransform = null;
         canBePlaced = false;
         GameManager.isPlacing = false;
+        GameManager.canType = true;
     }
 
     void OnTriggerEnter2D(Collider2D c)

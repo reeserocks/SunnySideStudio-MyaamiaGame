@@ -58,6 +58,8 @@ public class Fork : ObjectParent
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                 rb.gravityScale = 1;
                 thisCollision.isTrigger = false;
+                GameManager.isPlacing = false;
+                GameManager.canType = true;
                 this.enabled = false;
             }
             else if (tooFarIn || isColliding)
@@ -69,6 +71,8 @@ public class Fork : ObjectParent
                 rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 rb.gravityScale = 1;
                 thisCollision.isTrigger = false;
+                GameManager.isPlacing = false;
+                GameManager.canType = true;
                 this.enabled = false;
             }
         }
