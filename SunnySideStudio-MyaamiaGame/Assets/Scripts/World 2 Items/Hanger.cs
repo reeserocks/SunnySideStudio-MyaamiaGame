@@ -35,27 +35,27 @@ public class Hanger : ObjectParent
             return;
         }
 
-        // after placement - swinging logic
-        if (isPlayerAttached && playerRb)
-        {
-            float horizontal = Input.GetAxisRaw("Horizontal");
-            float vertical = Input.GetAxisRaw("Vertical");
+        //// after placement - swinging logic
+        //if (isPlayerAttached && playerRb)
+        //{
+        //    float horizontal = Input.GetAxisRaw("Horizontal");
+        //    float vertical = Input.GetAxisRaw("Vertical");
 
-            // add torque
-            rb.AddTorque(-horizontal * swingTorque * Time.deltaTime, ForceMode2D.Force);
+        //    // add torque
+        //    rb.AddTorque(-horizontal * swingTorque * Time.deltaTime, ForceMode2D.Force);
 
-            // clamp rotation
-            rb.rotation = Mathf.Clamp(rb.rotation, -maxRotation, maxRotation);
+        //    // clamp rotation
+        //    rb.rotation = Mathf.Clamp(rb.rotation, -maxRotation, maxRotation);
 
-            if (vertical != 0)
-                DetachPlayer();
-        }
-        else
-        {
-            // settle hanger back to rest
-            rb.angularVelocity *= 0.95f;
-            rb.rotation = Mathf.Lerp(rb.rotation, 0f, Time.deltaTime * 1.5f);
-        }
+        //    if (vertical != 0)
+        //        DetachPlayer();
+        //}
+        //else
+        //{
+        //    // settle hanger back to rest
+        //    rb.angularVelocity *= 0.95f;
+        //    rb.rotation = Mathf.Lerp(rb.rotation, 0f, Time.deltaTime * 1.5f);
+        //}
     }
 
     // confirmed placement
@@ -68,19 +68,21 @@ public class Hanger : ObjectParent
             StartCoroutine(ColorFlash());
             return;
         }
+        else
+        {
+            rb.gravityScale = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            rb.angularDamping = 1.5f;
+            thisCollision.isTrigger = false;
 
-        rb.gravityScale = 0;
-        rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
-        rb.angularDamping = 1.5f;
-        thisCollision.isTrigger = false;
+            fixedPos = rb.position;
 
-        fixedPos = rb.position;
-
-        spriteRen.color = new Color(1, 1, 1, 1);
-        placementZoneTransform = null;
-        canBePlaced = false;
-        GameManager.isPlacing = false;
-        GameManager.canType = true;
+            spriteRen.color = new Color(1, 1, 1, 1);
+            placementZoneTransform = null;
+            canBePlaced = false;
+            GameManager.isPlacing = false;
+            GameManager.canType = true;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D c)
@@ -101,16 +103,16 @@ public class Hanger : ObjectParent
         }
     }
 
-    void OnCollisionEnter2D(Collision2D c)
-    {
-        if (thisCollision.isTrigger) return;
+    //void OnCollisionEnter2D(Collision2D c)
+    //{
+    //    if (thisCollision.isTrigger) return;
 
-        if (c.collider.CompareTag("Player") && !isPlayerAttached)
-        {
-            playerRb = c.collider.GetComponent<Rigidbody2D>();
-            if (playerRb) AttachPlayer();
-        }
-    }
+    //    if (c.collider.CompareTag("Player") && !isPlayerAttached)
+    //    {
+    //        playerRb = c.collider.GetComponent<Rigidbody2D>();
+    //        if (playerRb) AttachPlayer();
+    //    }
+    //}
 
     void AttachPlayer()
     {
