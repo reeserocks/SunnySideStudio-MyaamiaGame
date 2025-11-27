@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class Hanger : ObjectParent
 {
-    float swingTorque = 30f;
-    float maxRotation = 60f;
+    //float swingTorque = 30f;
+    //float maxRotation = 60f;
     float jumpForce = 12f;
     float swingBoostMultiplier = 0.1f;
     float maxSwingSpeed = 300f;
 
     Rigidbody2D playerRb;
     HingeJoint2D joint;
-    bool isPlayerAttached;
+    //bool isPlayerAttached;
 
     bool canBePlaced = false;
     Transform placementZoneTransform = null;
@@ -122,7 +122,7 @@ public class Hanger : ObjectParent
         joint.connectedAnchor = new Vector2(0, -7f);
 
         playerRb.GetComponent<Player>()?.SetHanging(true);
-        isPlayerAttached = true;
+        //isPlayerAttached = true;
     }
 
     void DetachPlayer()
@@ -139,7 +139,7 @@ public class Hanger : ObjectParent
         playerRb.AddForce(tangent * jumpPower, ForceMode2D.Impulse);
         playerRb.GetComponent<Player>()?.SetHanging(false);
 
-        isPlayerAttached = false;
+        //isPlayerAttached = false;
         playerRb = null;
         joint = null;
     }
