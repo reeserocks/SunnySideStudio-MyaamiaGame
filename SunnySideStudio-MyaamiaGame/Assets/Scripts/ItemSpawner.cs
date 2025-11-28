@@ -113,7 +113,7 @@ public class ItemSpawner : MonoBehaviour
                 textBar.text = currentText;
             }
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && !GameManager.isPlacing)
         {
             Destroy(objectsStack.Pop());
             itemCount--;

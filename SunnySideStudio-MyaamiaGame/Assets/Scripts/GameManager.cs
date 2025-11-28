@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
         }
         */
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPlacing && !canType)
         {
             menus.SetActive(!menus.activeSelf);
             Cursor.visible = true;

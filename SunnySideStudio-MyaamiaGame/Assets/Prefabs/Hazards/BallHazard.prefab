@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8004158705629927133
+--- !u!1 &7437227251454560225
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6775422692850179071}
-  - component: {fileID: 6265422278547209888}
-  - component: {fileID: 569580879231473322}
-  - component: {fileID: 2106683453345416466}
-  - component: {fileID: 1711776302107309958}
-  - component: {fileID: 5019041534325687878}
-  - component: {fileID: 5877409536834014027}
-  m_Layer: 0
-  m_Name: Bowl
+  - component: {fileID: 2167683046682226186}
+  - component: {fileID: 3059245177137571623}
+  - component: {fileID: 7494994338246151800}
+  - component: {fileID: 7283113379823744374}
+  - component: {fileID: 1213149251299806374}
+  m_Layer: 3
+  m_Name: BallHazard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6775422692850179071
+--- !u!4 &2167683046682226186
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004158705629927133}
+  m_GameObject: {fileID: 7437227251454560225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.02, y: 0.9, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.94, y: 3.91, z: 0}
+  m_LocalScale: {x: 0.10614496, y: 0.10614496, z: 0.10614496}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &6265422278547209888
+--- !u!212 &3059245177137571623
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004158705629927133}
+  m_GameObject: {fileID: 7437227251454560225}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -84,25 +82,25 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3717156846046891886, guid: a5d69b95c101deb42b1f950c6d29334f, type: 3}
+  m_Sprite: {fileID: 8374419980335379062, guid: 066b5ef8ed92f2541a1b5e6d689f019f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 18.06, y: 7.9313307}
+  m_Size: {x: 11.66, y: 11.66}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &569580879231473322
+--- !u!50 &7494994338246151800
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004158705629927133}
+  m_GameObject: {fileID: 7437227251454560225}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -110,7 +108,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -122,59 +120,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &2106683453345416466
-BoxCollider2D:
+--- !u!58 &7283113379823744374
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004158705629927133}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 1
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.08807993, y: 2.2285962}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.41, y: 2.38}
-    newSize: {x: 18.06, y: 7.9313307}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.9443097, y: 5.884961}
-  m_EdgeRadius: 0
---- !u!68 &1711776302107309958
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004158705629927133}
+  m_GameObject: {fileID: 7437227251454560225}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -203,47 +155,16 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 1.1589701, y: 1.2146873}
-  - {x: 1.2153275, y: -1.1296799}
-  - {x: -1.1897719, y: -1.2017661}
-  - {x: -1.2292031, y: -0.86298597}
-  - {x: 0.8608112, y: 1.2053077}
-  - {x: 1.1489375, y: 1.1866571}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
---- !u!249 &5019041534325687878
-AreaEffector2D:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004158705629927133}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 8
-  m_UseGlobalAngle: 1
-  m_ForceAngle: 90
-  m_ForceMagnitude: 60
-  m_ForceVariation: 0
-  m_ForceTarget: 0
-  m_LinearDamping: 0
-  m_AngularDamping: 0
---- !u!114 &5877409536834014027
+  m_Radius: 5.83
+--- !u!114 &1213149251299806374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8004158705629927133}
+  m_GameObject: {fileID: 7437227251454560225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9aecdd9815305845a3f750373a98e72, type: 3}
+  m_Script: {fileID: 11500000, guid: 593a33c66b3f58b48946017105768a59, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bowl
+  m_EditorClassIdentifier: Assembly-CSharp::BallHazard

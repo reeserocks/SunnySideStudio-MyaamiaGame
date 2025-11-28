@@ -9,13 +9,16 @@ public class Bowl : ObjectParent
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        effector = GetComponent<AreaEffector2D>();  
-        effector.enabled = false;
+        thisCollision = GetComponents<Collider2D>()[1];
+        thisCollision.isTrigger = true;
+        effector = GetComponent<AreaEffector2D>();
+        effector.forceMagnitude = 0;
     }
 
     // Update is called once per frame
     new void Update()
     {
+        
         if (!(Input.GetKeyDown(KeyCode.Return)))
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -53,7 +56,8 @@ public class Bowl : ObjectParent
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ground"))
+        Debug.Log("Trigger entered");
+        if (collision.gameObject.CompareTag("Ground"))
         {
             isColliding = true;
             collisionCount++;
@@ -62,11 +66,37 @@ public class Bowl : ObjectParent
         {
             if (collision.gameObject.transform.localScale.x > 0.0f && this.transform.localScale.x < 0.0f)
             {
-                effector.enabled = true;
+                effector.forceMagnitude = 60;
             }
             else if (collision.gameObject.transform.localScale.x < 0.0f && this.transform.localScale.x > 0.0f)
             {
-                effector.enabled = true;
+                effector.forceMagnitude = 60;
+            }
+        }
+        else if (collision.gameObject.CompareTag("SwitchableWater"))
+        {
+            water = collision.gameObject.ConvertTo<Water>();
+            water.SwitchDirection(this.transform.localScale.x);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Debug.Log("trigger stayed");
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isColliding = true;
+            collisionCount++;
+        }
+        else if (collision.gameObject.CompareTag("Fan"))
+        {
+            if (collision.gameObject.transform.localScale.x > 0.0f && this.transform.localScale.x < 0.0f)
+            {
+                effector.forceMagnitude = 60;
+            }
+            else if (collision.gameObject.transform.localScale.x < 0.0f && this.transform.localScale.x > 0.0f)
+            {
+                effector.forceMagnitude = 60;
             }
         }
         else if (collision.gameObject.CompareTag("SwitchableWater"))
@@ -78,7 +108,7 @@ public class Bowl : ObjectParent
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             collisionCount--;
             if (collisionCount == 0)
@@ -88,7 +118,7 @@ public class Bowl : ObjectParent
         }
         else if (collision.gameObject.CompareTag("Fan"))
         {
-            effector.enabled = false;
+            effector.forceMagnitude = 0;
         }
         else if (collision.gameObject.CompareTag("SwitchableWater"))
         {
