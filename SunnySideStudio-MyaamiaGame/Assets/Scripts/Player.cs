@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public bool pushedByFan;
     private int fanDirection;
 
+
     private void Start()
     {
         GameManager.Instance.Player = this;
