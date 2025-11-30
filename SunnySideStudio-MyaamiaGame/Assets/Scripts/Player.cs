@@ -183,6 +183,30 @@ public class Player : MonoBehaviour
                 fanDirection = 1;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ground") && canMove)
+        {
+            isGrounded = true;
+            jumpHeld = false;
+
+        }
+        else if (collision.gameObject.CompareTag("Fan") && canMove)
+        {
+            if (collision.gameObject.transform.rotation.z == -90.0f)
+            {
+                fanDirection = 0;
+            }
+            else if (collision.gameObject.transform.localScale.x > 0.0f)
+            {
+                fanDirection = -1;
+            }
+            else
+                fanDirection = 1;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Ground") && canMove)

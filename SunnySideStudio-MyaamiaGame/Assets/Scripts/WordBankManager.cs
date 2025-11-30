@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WordBankManager : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class WordBankManager : MonoBehaviour
     {
         if (positionChange != -1)
         {
-            GameManager.discoveredWords[positionChange] = true;
+            GameManager.discoveredWords[positionChange - 1] = true;
         }
     }
 
