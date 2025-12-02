@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c773fab2836a5429998a542985d038, type: 3}
   m_Name: Word_12
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  myaamiaWord: ansiwataakani
-  englishTranslation: Seed
-  description: Grows into a plant with climbable leaf platforms.
-  image: {fileID: 0}
+  myaamiaWord: paaskoontia
+  englishTranslation: Ball
+  description: Can be used as a rolling platform.
+  image: {fileID: -3919779002189068522, guid: a33b5a5e1a2795a43a89d39c1b233ade, type: 3}

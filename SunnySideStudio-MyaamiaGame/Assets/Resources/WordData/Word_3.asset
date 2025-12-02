@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c773fab2836a5429998a542985d038, type: 3}
   m_Name: Word_3
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  myaamiaWord: akootaakani
-  englishTranslation: Hanger
-  description: Can be used as a hanging and swinging platform.
-  image: {fileID: -3900582269341384456, guid: 35f03b10e94b96c49b48cfc9ee243275, type: 3}
+  myaamiaWord: mihkintaakani
+  englishTranslation: Pillow
+  description: Can be used as a slow buildup spring.
+  image: {fileID: 6216394963698368553, guid: db259b12ed33ab148b92f9b20112f5c0, type: 3}
