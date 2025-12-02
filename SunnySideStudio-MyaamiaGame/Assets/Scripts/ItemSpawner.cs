@@ -22,6 +22,8 @@ public class ItemSpawner : MonoBehaviour
     [SerializeField] AudioClip audioClipSuccess;
     [SerializeField] AudioClip audioClipFail;
 
+    public GameObject limitText;
+
     private void Start()
     {
         wordBank = GameObject.Find("WordBank");
@@ -74,9 +76,10 @@ public class ItemSpawner : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Too many items spawned. Will be added to UI later");
                     currentText = string.Empty;
                     textBar.text = string.Empty;
+
+                    setText();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Backspace))
@@ -132,6 +135,18 @@ public class ItemSpawner : MonoBehaviour
             index++;
         }
         return -1;
+    }
+
+    private void setText()   
+    {
+        limitText.SetActive(true);
+        StartCoroutine(HideText(2f));
+    }
+
+    IEnumerator HideText(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        limitText.SetActive(false);
     }
 
 

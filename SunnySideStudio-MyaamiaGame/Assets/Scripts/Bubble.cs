@@ -62,7 +62,7 @@ public class Bubble : MonoBehaviour
     IEnumerator pop()
     {
         colliders[1].enabled = false;
-        //@reese play animation here
+        animator.SetBool("pop?", true);
         speed = 0;
         yield return new WaitForSeconds(1f);
         Reset();
@@ -75,6 +75,6 @@ public class Bubble : MonoBehaviour
         colliders[0].enabled = true;
         colliders[1].enabled = true;
         speed = 1;
-        //@reese set back to initial frame and stop animation here
+        animator.SetBool("pop?", false);
     }
 }

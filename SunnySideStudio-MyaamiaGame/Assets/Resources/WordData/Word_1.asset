@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c773fab2836a5429998a542985d038, type: 3}
   m_Name: Word_1
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  myaamiaWord: eesaakan
+  myaamiaWord: paahphtoonki
   englishTranslation: Toy Block
   description: Can be used as a boxy platform.
   image: {fileID: -3392826227582950823, guid: 1d0b59568dbaf9e49a7f6205f54801e4, type: 3}

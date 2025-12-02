@@ -454,8 +454,11 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.4f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Scripts/BallHazard.cs"
+"Assets/Scripts/Bubble.cs"
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/ControlSwitcher.cs"
+"Assets/Scripts/Fan.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/ItemSpawner.cs"
 "Assets/Scripts/LevelFlag.cs"
@@ -480,6 +483,7 @@
 "Assets/Scripts/World 3 Items/Fork.cs"
 "Assets/Scripts/World 3 Items/Spoon.cs"
 "Assets/Scripts/World 4 Items/Sponge.cs"
+"Assets/Scripts/World 5 Items/Ball.cs"
 -langversion:9.0
 /deterministic
 /optimize+
