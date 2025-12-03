@@ -1544,6 +1544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1497370284241994175, guid: 0bb01e4d07850024f92d8a2de99f4291, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 31.599976
+      objectReference: {fileID: 0}
     - target: {fileID: 4468545424477553578, guid: 0bb01e4d07850024f92d8a2de99f4291, type: 3}
       propertyPath: m_Name
       value: ItemTextBox
