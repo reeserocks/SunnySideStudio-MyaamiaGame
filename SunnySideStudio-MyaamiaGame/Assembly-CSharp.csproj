@@ -72,10 +72,12 @@
     <Compile Include="Assets\Scripts\World 2 Items\Hanger.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\World 5 Items\Ball.cs" />
+    <Compile Include="Assets\Scripts\World 5 Items\Seed.cs" />
     <Compile Include="Assets\Scripts\BallHazard.cs" />
     <Compile Include="Assets\Scripts\UpdateHUD.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\WordBankManager.cs" />
+    <Compile Include="Assets\Scripts\World 5 Items\Flower.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\Fan.cs" />
     <Compile Include="Assets\Scripts\World 3 Items\Fork.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\Scripts\Scene Handling\LevelSelect.cs" />
     <Compile Include="Assets\Scripts\World 3 Items\Spoon.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\World 4 Items\Floss.cs" />
     <Compile Include="Assets\Scripts\LevelFlag.cs" />
     <Compile Include="Assets\Scripts\SwitchableWater.cs" />
   </ItemGroup>
