@@ -35,7 +35,7 @@ public class WordBankManager : MonoBehaviour
 
     void updateDiscoveredWords()
     {
-        if (positionChange != -1)
+        if (positionChange <= 0)
         {
             GameManager.discoveredWords[positionChange - 1] = true;
             GameManager.learnedNewWord = true;

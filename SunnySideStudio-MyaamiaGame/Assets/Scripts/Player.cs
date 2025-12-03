@@ -1,6 +1,7 @@
 //PLAYER.CS
 
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -12,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    private float jumpForce = 23f;
+    public float jumpForce = 23f;
     private float holdForce = 0.8f;
     private float maxHoldTime = 0.35f;
 
@@ -28,6 +29,7 @@ public class Player : MonoBehaviour
     public bool pushedByFan;
     private int fanDirection;
 
+    public int timeLimit = 240; //4 seconds * 60 checks per second
 
     private void Start()
     {
@@ -35,6 +37,26 @@ public class Player : MonoBehaviour
         canMove = true;
     }
 
+    public IEnumerator floatingState(Flower flower)
+    {
+        if (!isGrounded)
+        {
+            timeLimit--;
+        }
+
+        if (timeLimit == 0)
+        {
+            rb.gravityScale = 5;
+            jumpForce = 23f;
+            Destroy(flower.gameObject);
+            Debug.Log("Time's up!");
+        }
+        else
+        {
+            yield return new WaitForFixedUpdate();
+            StartCoroutine(floatingState(flower));
+        }
+    }
 
     void Update()
     {

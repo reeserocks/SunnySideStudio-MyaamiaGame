@@ -6,7 +6,7 @@ public class ObjectParent : MonoBehaviour
 {
     protected Rigidbody2D rb;
     protected Collider2D thisCollision;
-    private float maxVelocity = 4.0f;
+    protected float maxVelocity = 4.0f;
     protected float speed = .1f;
     protected float moveHorizontal;
     protected float moveVertical;
