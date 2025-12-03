@@ -482,8 +482,11 @@
 "Assets/Scripts/World 3 Items/Bowl.cs"
 "Assets/Scripts/World 3 Items/Fork.cs"
 "Assets/Scripts/World 3 Items/Spoon.cs"
+"Assets/Scripts/World 4 Items/Floss.cs"
 "Assets/Scripts/World 4 Items/Sponge.cs"
 "Assets/Scripts/World 5 Items/Ball.cs"
+"Assets/Scripts/World 5 Items/Flower.cs"
+"Assets/Scripts/World 5 Items/Seed.cs"
 -langversion:9.0
 /deterministic
 /optimize+
