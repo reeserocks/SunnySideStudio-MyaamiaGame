@@ -4,9 +4,11 @@ using UnityEngine;
 public class Seed : ObjectParent
 {
     private Collider2D[] allCollisions;
+    private Animator animator;
 
     new private void Awake()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         allCollisions = GetComponents<Collider2D>();
         foreach (Collider2D collider in allCollisions)
@@ -30,7 +32,7 @@ public class Seed : ObjectParent
     {
         if (collision.gameObject.CompareTag("Ground") && this.spriteRen.color.a == 1)
         {
-            //@reese play animation here
+            animator.SetBool("growTime?", true);
             foreach (Collider2D collider in allCollisions)
                 collider.enabled = true;
             rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;

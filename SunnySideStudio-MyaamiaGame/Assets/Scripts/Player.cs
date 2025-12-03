@@ -42,6 +42,8 @@ public class Player : MonoBehaviour
         if (!isGrounded)
         {
             timeLimit--;
+
+            flower.GetComponent<Animator>().SetInteger("numPetals", timeLimit / 60);
         }
 
         if (timeLimit == 0)
