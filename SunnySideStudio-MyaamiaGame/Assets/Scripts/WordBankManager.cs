@@ -38,6 +38,11 @@ public class WordBankManager : MonoBehaviour
         if (positionChange != -1)
         {
             GameManager.discoveredWords[positionChange - 1] = true;
+            GameManager.learnedNewWord = true;
+        }
+        else
+        {
+            GameManager.learnedNewWord = false;
         }
     }
 

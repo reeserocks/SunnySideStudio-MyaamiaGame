@@ -66,6 +66,10 @@ public class WordReviewScreen : MonoBehaviour
         }
 
         int randomIndex = learnedIndices[Random.Range(0, learnedIndices.Count)];
+        if (GameManager.learnedNewWord)
+        {
+            randomIndex = learnedIndices.Count - 1;
+        }
 
         // make sure assets are named Word_x.asset
         WordData data = Resources.Load<WordData>($"WordData/Word_{randomIndex}");
