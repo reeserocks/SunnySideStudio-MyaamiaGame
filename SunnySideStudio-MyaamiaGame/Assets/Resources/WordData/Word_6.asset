@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c773fab2836a5429998a542985d038, type: 3}
   m_Name: Word_6
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  myaamiaWord: 'neewikoleeki '
-  englishTranslation: Fork
-  description: Its prongs can be stuck into walls to form a platform.
-  image: {fileID: -7241275139643303700, guid: 64cde34da1d981046a22c66787c38aed, type: 3}
+  myaamiaWord: nipoopilaakani
+  englishTranslation: Bowl
+  description: Angling it can be used to control water or airflow.
+  image: {fileID: 4851750565431800638, guid: d2c03801f2b2e4042869168b1ae90d61, type: 3}

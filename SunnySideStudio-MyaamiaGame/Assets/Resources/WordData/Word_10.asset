@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c773fab2836a5429998a542985d038, type: 3}
   m_Name: Word_10
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  myaamiaWord: ciikwaapiteehwioni
-  englishTranslation: Floss
-  description: Can be used to attach objects/stage platforms.
-  image: {fileID: 0}
+  myaamiaWord: waapahaakani
+  englishTranslation: Soap
+  description: Can be used as a sliding accelerating platform on land.
+  image: {fileID: 1025785841229483327, guid: 22b9c708aace409429b89afa9c73ded7, type: 3}

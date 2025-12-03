@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c773fab2836a5429998a542985d038, type: 3}
   m_Name: Word_7
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  myaamiaWord: kookaani
-  englishTranslation: Spoon
-  description: Can be used as a catapult.
-  image: {fileID: 5455075833668332755, guid: 0c0e37cdae81f5f4484e5038a2bfbcc4, type: 3}
+  myaamiaWord: 'neewikoleeki '
+  englishTranslation: Fork
+  description: Its prongs can be stuck into walls to form a platform.
+  image: {fileID: -7241275139643303700, guid: 64cde34da1d981046a22c66787c38aed, type: 3}
