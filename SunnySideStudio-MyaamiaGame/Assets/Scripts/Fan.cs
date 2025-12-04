@@ -24,7 +24,7 @@ public class Fan : MonoBehaviour
     {
         if (shouldCheck)
         {
-            if (Physics2D.Linecast(this.transform.position, player.gameObject.transform.position, 1, -0.31f, 0.01f))
+            if (Physics2D.Linecast(this.transform.position, player.gameObject.transform.position, 1, -0.31f, 0.01f).transform != this.transform)
             {
                 player.pushedByFan = false;
                 this.GetComponent<AreaEffector2D>().enabled = false;

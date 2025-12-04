@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        this.gameObject.layer = 3;
         GameManager.Instance.Player = this;
         canMove = true;
     }
@@ -131,6 +132,11 @@ public class Player : MonoBehaviour
             spriteRenderer.transform.localScale = new Vector3(.18f, .18f, .18f);
         }
 
+        if (!isGrounded && pushedByFan)
+        {
+            rb.linearVelocityX = 25 * fanDirection;
+        }
+
         // jump
         if (isJumping && canMove)
         {
@@ -199,7 +205,7 @@ public class Player : MonoBehaviour
             {
                 fanDirection = 0;
             }
-            else if (collision.gameObject.transform.localScale.x > 0.0f)
+            else if (collision.gameObject.transform.rotation.y == 0.0f)
             {
                 fanDirection = -1;
             }
@@ -222,7 +228,7 @@ public class Player : MonoBehaviour
             {
                 fanDirection = 0;
             }
-            else if (collision.gameObject.transform.localScale.x > 0.0f)
+            else if (collision.gameObject.transform.rotation.y == 0.0f)
             {
                 fanDirection = -1;
             }
