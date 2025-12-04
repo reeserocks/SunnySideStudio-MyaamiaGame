@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3073130014617964155}
   - component: {fileID: 306855522272481633}
   - component: {fileID: 2824272602920398619}
+  - component: {fileID: 3750071750030837235}
   m_Layer: 3
   m_Name: Sponge
   m_TagString: Ground
@@ -182,3 +183,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a913154e259e34ab9dbc1395022cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Sponge
+--- !u!61 &3750071750030837235
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8726612626318818682}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0765816, y: -0.277524}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.67, y: 4.97}
+    newSize: {x: 8.87, y: 5.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 4.4943857, y: 4.4149513}
+  m_EdgeRadius: 0
