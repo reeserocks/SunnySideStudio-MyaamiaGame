@@ -186,7 +186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Peehkateeki
+  m_text: peehkateeki
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ataakakwincitaakani
+  m_text: ataakakwincitaakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kookaani
+  m_text: kookaani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Paahphtoonki
+  m_text: paahphtoonki
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ciikwaapiteehwioni
+  m_text: ciikwaapiteehwioni
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neewikoleeki '
+  m_text: 'neewikoleeki '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -1590,7 +1590,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ansiwataakani
+  m_text: ansiwataakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -1847,7 +1847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Waapantenaakani
+  m_text: waapantenaakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -1983,7 +1983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Awikaakani
+  m_text: awikaakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -2119,7 +2119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nipoopilaakani
+  m_text: nipoopilaakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -2395,6 +2395,7 @@ GameObject:
   - component: {fileID: 7867350743217557097}
   - component: {fileID: 8909606952000867398}
   - component: {fileID: 6374071070234566837}
+  - component: {fileID: 333258894860310630}
   m_Layer: 5
   m_Name: WordBank
   m_TagString: Untagged
@@ -2498,7 +2499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WordBankManager
   wordBank: {fileID: 4413833085412461409}
-  positionChange: 1
+  positionChange: 2
 --- !u!225 &6374071070234566837
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2507,10 +2508,18 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4413833085412461409}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!222 &333258894860310630
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413833085412461409}
+  m_CullTransparentMesh: 1
 --- !u!1 &4939311946366840118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,7 +3190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mihkintaakani
+  m_text: mihkintaakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -3438,7 +3447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Paaskoontia
+  m_text: paaskoontia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -3574,7 +3583,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Akootaakani
+  m_text: akootaakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -3831,7 +3840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wiintaakani
+  m_text: wiintaakani
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
@@ -4157,7 +4166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Waapahaakani '
+  m_text: 'waapahaakani '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
   m_sharedMaterial: {fileID: 692624626691381059, guid: 1581a52c6e94c02478bb6e41bb3c42d4, type: 2}
