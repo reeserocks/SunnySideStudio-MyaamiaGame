@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     public static List<bool> discoveredWords = Enumerable.Repeat<bool>(false, 15).ToList();
     public static bool learnedNewWord;
+    public static bool hardModeEnabled;
     public static bool isPlacing = false;
     public static bool canType = false;
     public static int worldSelected;

@@ -94,10 +94,12 @@ public class MenuSelect : MonoBehaviour
         if (buttonText.text == "OFF")
         {
             buttonText.text = "ON";
+            GameManager.hardModeEnabled = true;
         }
         else
         {
             buttonText.text = "OFF";
+            GameManager.hardModeEnabled = false;
         }
     }
 }

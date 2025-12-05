@@ -87,7 +87,7 @@ public class ItemSpawner : MonoBehaviour
                 currentText = currentText.Remove(currentText.Length - 1);
                 textBar.text = currentText;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftControl))
+            else if (Input.GetKeyDown(KeyCode.LeftControl) && !GameManager.hardModeEnabled)
             {
                 Debug.Log("Switching word bank mode");
                 if (bankCanvas.alpha == 0f)
