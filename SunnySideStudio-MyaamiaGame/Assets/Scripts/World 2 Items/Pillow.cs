@@ -20,7 +20,18 @@ public class Pillow : ObjectParent
     IEnumerator waitTime (Collision2D collision)
     {
         yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForFixedUpdate();
+        Debug.Log("lanuching");
         Rigidbody2D otherBody = collision.gameObject.GetComponent<Rigidbody2D>();
-        otherBody.AddForce(new Vector2(0, 75.0f), ForceMode2D.Impulse);
+        Debug.Log(otherBody.gameObject);
+        if (otherBody != null)
+        {
+            otherBody.GetComponent<Player>().isJumping = true;
+            otherBody.AddForce(new Vector2(0, 45.0f), ForceMode2D.Impulse);
+        }
+        else
+        {
+            Debug.Log("error in getting rigid body");
+        }
     }
 }
