@@ -11,13 +11,6 @@ public class Bubble : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        var others = FindFirstObjectByType<Bubble>();
-
-        if (others != this)
-        {
-            Destroy(this.gameObject);
-        }
-
         colliders = GetComponents<BoxCollider2D>();
         animator = GetComponent<Animator>();
         startLocation = this.transform.position;
