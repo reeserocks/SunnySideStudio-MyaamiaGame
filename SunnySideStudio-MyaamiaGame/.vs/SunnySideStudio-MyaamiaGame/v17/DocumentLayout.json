@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|c:\\users\\reese\\onedrive\\documents\\unity projects\\sunnysidestudio-myaamiagame\\sunnysidestudio-myaamiagame\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\assets\\scripts\\camera, bounds\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera, bounds\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\assets\\scripts\\camera, bounds\\setworldbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera, bounds\\setworldbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\assets\\scripts\\camera, bounds\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera, bounds\\cameramovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|c:\\users\\reese\\onedrive\\documents\\unity projects\\sunnysidestudio-myaamiagame\\sunnysidestudio-myaamiagame\\assets\\scripts\\camera, bounds\\setworldbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera, bounds\\setworldbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|c:\\users\\reese\\onedrive\\documents\\unity projects\\sunnysidestudio-myaamiagame\\sunnysidestudio-myaamiagame\\assets\\scripts\\camera, bounds\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera, bounds\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|c:\\users\\reese\\onedrive\\documents\\unity projects\\sunnysidestudio-myaamiagame\\sunnysidestudio-myaamiagame\\assets\\scripts\\world 4 items\\sponge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\assets\\scripts\\world 4 items\\sponge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA1222C3-874F-2F99-B970-06B978ED232A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world 4 items\\sponge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -142,13 +142,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Globals.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Camera, Bounds\\Globals.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Camera, Bounds\\Globals.cs",
               "ToolTip": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Camera, Bounds\\Globals.cs",
               "RelativeToolTip": "Assets\\Scripts\\Camera, Bounds\\Globals.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T20:37:53.568Z",
               "EditorCaption": ""
@@ -161,20 +161,20 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Camera, Bounds\\SetWorldBounds.cs",
               "ToolTip": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Camera, Bounds\\SetWorldBounds.cs",
               "RelativeToolTip": "Assets\\Scripts\\Camera, Bounds\\SetWorldBounds.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T20:37:23.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CameraMovement.cs",
               "DocumentMoniker": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Camera, Bounds\\CameraMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Camera, Bounds\\CameraMovement.cs",
               "ToolTip": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Camera, Bounds\\CameraMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Camera, Bounds\\CameraMovement.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAkwCkAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAkwCIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T18:28:32.503Z",
               "EditorCaption": ""
@@ -294,7 +294,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\reese\\OneDrive\\Documents\\Unity Projects\\SunnySideStudio-MyaamiaGame\\SunnySideStudio-MyaamiaGame\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAiwE8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAcwFwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T02:07:51.072Z",
               "EditorCaption": ""
@@ -309,8 +309,7 @@
               "RelativeToolTip": "Assets\\Scripts\\World 4 Items\\Sponge.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T19:04:03.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T19:04:03.12Z"
             },
             {
               "$type": "Document",

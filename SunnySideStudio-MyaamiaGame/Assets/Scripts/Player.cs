@@ -89,8 +89,9 @@ public class Player : MonoBehaviour
                 rb.linearVelocityX = 0.0f;
             }
         }
-        
-        if (transform.position.y < -5)
+
+        // reset player if out of bounds
+        if (!Globals.WorldBounds.Contains(transform.position))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
