@@ -1718,6 +1718,10 @@ PrefabInstance:
       propertyPath: controlManager
       value: 
       objectReference: {fileID: 4476287590447833386, guid: 4475f18071e94ba42b284200bf930365, type: 3}
+    - target: {fileID: 5872463644335231384, guid: 883f5767a7a6abf428cb9e4da95eb6a8, type: 3}
+      propertyPath: 'englishValidObjects.Array.data[11]'
+      value: 
+      objectReference: {fileID: 7627246316807245718}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2305,6 +2309,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
+--- !u!1 &7627246316807245718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1020848602571887736, guid: e3c34b5ffbf775241a80bf5bfa5724f7, type: 3}
+  m_PrefabInstance: {fileID: 7627246316807245717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8886439865989137255
 PrefabInstance:
   m_ObjectHideFlags: 0
