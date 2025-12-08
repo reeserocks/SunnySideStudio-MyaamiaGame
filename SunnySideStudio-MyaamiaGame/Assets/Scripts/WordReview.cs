@@ -30,10 +30,6 @@ public class WordReviewScreen : MonoBehaviour
         discoveredWords = WordBankManager.GetDiscoveredWords();
 
         int world = GameManager.playerSaveData.worldUnlocked;
-        if (world <= 0)
-        {
-            world = 1;
-        }
 
         Image background = GameObject.Find("Background").GetComponent<Image>();
         Sprite bg = Resources.Load<Sprite>($"world{world}_lvlSelectBG");

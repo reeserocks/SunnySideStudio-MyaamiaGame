@@ -91,7 +91,10 @@ public class Player : MonoBehaviour
         }
 
         // reset player if out of bounds
-        if (!Globals.WorldBounds.Contains(transform.position))
+        if (transform.position.x < Globals.WorldBounds.min.x ||
+            transform.position.x > Globals.WorldBounds.max.x ||
+            transform.position.y < Globals.WorldBounds.min.y ||
+            transform.position.y > Globals.WorldBounds.max.y)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
