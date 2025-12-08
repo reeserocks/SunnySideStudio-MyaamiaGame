@@ -22,10 +22,13 @@ public class Floss : MonoBehaviour
     private int placementPhase = 0;
     private GameObject tempObject;
 
+    public float maxDistance = 3.0f;
+
     protected float maxVelocity = 4.0f;
     protected float speed = .1f;
     protected float moveHorizontal;
     protected float moveVertical;
+    private float lastVelocityX, lastVelocityY = 0;
 
     private bool bothMove;
 
@@ -79,8 +82,42 @@ public class Floss : MonoBehaviour
         }
         else if (bothMove)
         {
-
-            //Manage connected object velocities
+            if (startRb.linearVelocityX != lastVelocityX)
+            {
+                endRb.linearVelocityX = -startRb.linearVelocityX;
+                lastVelocityX = startRb.linearVelocityX;
+            }
+            else if (endRb.linearVelocityX != lastVelocityX)
+            {
+                startRb.linearVelocityX = -endRb.linearVelocityX;
+                lastVelocityX = endRb.linearVelocityX;
+            }
+            if (startRb.linearVelocityY != lastVelocityY)
+            {
+                endRb.linearVelocityY = -startRb.linearVelocityY;
+                lastVelocityY = startRb.linearVelocityY;
+            }
+            else if (endRb.linearVelocityY != lastVelocityY)
+            {
+                startRb.linearVelocityY = -endRb.linearVelocityY;
+                lastVelocityY = endRb.linearVelocityY;
+            }
+        }
+        else
+        {
+            if (Vector2.Distance(startPoint.transform.position, endPoint.transform.position) > maxDistance)
+            {
+                if (startPoint.name.Contains("Platform") && !endPoint.name.Contains("Platform"))
+                {
+                    endPoint.transform.position = Vector2.MoveTowards(endPoint.transform.position, startPoint.transform.position, 15 * Time.deltaTime);
+                    endRb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+                }
+                else if (!startPoint.name.Contains("Platform") && endPoint.name.Contains("Platform"))
+                {
+                    startPoint.transform.position = Vector2.MoveTowards(startPoint.transform.position, endPoint.transform.position, 15 * Time.deltaTime);
+                    startRb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+                }
+            }
         }
 
         for (int i = 0; i < points.Count; i++)
