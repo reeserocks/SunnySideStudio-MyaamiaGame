@@ -158,9 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c726ee20c8f714f844e802ec128b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Floss
-  isColliding: 0
-  collisionCount: 0
-  tempObject: {fileID: 0}
+  maxDistance: 6
 --- !u!50 &268995495893617075
 Rigidbody2D:
   serializedVersion: 5

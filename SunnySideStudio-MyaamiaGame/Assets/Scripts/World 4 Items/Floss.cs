@@ -118,6 +118,17 @@ public class Floss : MonoBehaviour
                     startRb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
                 }
             }
+            else
+            {
+                if (startPoint.name.Contains("Platform") && !endPoint.name.Contains("Platform"))
+                {
+                    endRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
+                else if (!startPoint.name.Contains("Platform") && endPoint.name.Contains("Platform"))
+                {
+                    startRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
+            }
         }
 
         for (int i = 0; i < points.Count; i++)
