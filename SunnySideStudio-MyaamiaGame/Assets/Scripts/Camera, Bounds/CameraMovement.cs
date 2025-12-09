@@ -22,10 +22,10 @@ public class CameraMovement : MonoBehaviour
         var width = height * inCamera.aspect;
 
         var minX = Globals.WorldBounds.min.x + width;
-        var maxX = Globals.WorldBounds.extents.x - width;
+        var maxX = Globals.WorldBounds.max.x - width;
 
         var minY = Globals.WorldBounds.min.y + height;
-        var maxY = Globals.WorldBounds.extents.y - height;
+        var maxY = Globals.WorldBounds.max.y - height;
 
         cameraBounds = new Bounds();
         cameraBounds.SetMinMax(new Vector3(minX, minY, 0), new Vector3(maxX, maxY, 0));
@@ -35,7 +35,7 @@ public class CameraMovement : MonoBehaviour
     {
 
         targetPosition = player.position + offset;
-        targetPosition = GetCameraBounds();
+        targetPosition = GetCameraBounds(targetPosition);
 
         if (player != null)
         {
@@ -43,11 +43,11 @@ public class CameraMovement : MonoBehaviour
         }
     }
 
-    private Vector3 GetCameraBounds()
+    private Vector3 GetCameraBounds(Vector3 pos)
     {
         return new Vector3(
-            Mathf.Clamp(targetPosition.x, cameraBounds.min.x, cameraBounds.max.x),
-            Mathf.Clamp(targetPosition.y, cameraBounds.min.y, cameraBounds.max.y),
+            Mathf.Clamp(pos.x, cameraBounds.min.x, cameraBounds.max.x),
+            Mathf.Clamp(pos.y, cameraBounds.min.y, cameraBounds.max.y),
             transform.position.z
         );
     }

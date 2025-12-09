@@ -67,7 +67,6 @@ public class WordReviewScreen : MonoBehaviour
             randomIndex = learnedIndices.Count - 1;
         }
 
-        // make sure assets are named Word_x.asset
         WordData data = Resources.Load<WordData>($"WordData/Word_{randomIndex}");
 
         if (data != null)
@@ -107,7 +106,14 @@ public class WordReviewScreen : MonoBehaviour
         }
 
         int nextLevel = GameManager.playerSaveData.levelUnlocked;
-        SceneManager.LoadScene("Level" + nextLevel);
+        if (nextLevel != 50)
+        {
+            SceneManager.LoadScene("Level" + nextLevel);
+        }
+        else         
+        {
+            SceneManager.LoadScene("Title");
+        }
     }
 
     private void Update()
