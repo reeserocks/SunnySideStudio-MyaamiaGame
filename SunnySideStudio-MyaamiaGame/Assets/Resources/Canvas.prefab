@@ -5637,7 +5637,7 @@ MonoBehaviour:
   levelText: {fileID: 8880026875403721007}
   worldIcons:
   - {fileID: -1193663797364622673, guid: 4dbc34a1bef430c43946b6912796f27b, type: 3}
-  - {fileID: 9052361053657317127, guid: d836e4e027307c44cbe4c74a7640c5a6, type: 3}
+  - {fileID: -43216367, guid: d836e4e027307c44cbe4c74a7640c5a6, type: 3}
   - {fileID: 8197047826604361390, guid: 3404afdecbf68a44e8ad1266d29c4105, type: 3}
   - {fileID: -74116084, guid: a5ef02f8f135eaf46ae82a9954178b33, type: 3}
   - {fileID: -3521427111303423466, guid: 11c37f6bf679abb47ae9dceb65554d59, type: 3}
