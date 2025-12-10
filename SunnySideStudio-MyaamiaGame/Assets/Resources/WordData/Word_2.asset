@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c773fab2836a5429998a542985d038, type: 3}
   m_Name: Word_2
   m_EditorClassIdentifier: Assembly-CSharp::WordData
-  myaamiaWord: wiintaakan
+  myaamiaWord: wiintaakani
   englishTranslation: Book
   description: Can be used as a tall, vertical platform.
   image: {fileID: 2353571312451627304, guid: 88927ce595bd8c34d87def08f88f8ad8, type: 3}

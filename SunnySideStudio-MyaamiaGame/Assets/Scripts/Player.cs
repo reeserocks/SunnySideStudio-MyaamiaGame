@@ -92,7 +92,6 @@ public class Player : MonoBehaviour
 
         // reset player if out of bounds
         if (transform.position.x < Globals.WorldBounds.min.x ||
-            transform.position.x > Globals.WorldBounds.max.x ||
             transform.position.y < Globals.WorldBounds.min.y ||
             transform.position.y > Globals.WorldBounds.max.y)
         {
